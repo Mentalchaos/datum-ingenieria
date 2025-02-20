@@ -21,7 +21,7 @@ const NavBar = ({ activeComponent, setActiveComponent }) => {
             <NavOption
               key={option}
               label={option}
-              isActive={activeComponent === option} // Highlight active option
+              isActive={activeComponent === option}
               onClick={() => setActiveComponent(option)}
             />
           ))}

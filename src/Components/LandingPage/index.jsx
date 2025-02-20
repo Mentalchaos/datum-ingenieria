@@ -3,7 +3,8 @@ import Home from "../Home";
 import Footer from "../UI/Footer/Footer";
 import NavBar from "../UI/NavBar";
 import Services from "../Services";
-import HomeContact from "../Home/HomeContact";
+import AboutUs from "../AboutUs";
+import Complaints from "../Complaints";
 
 const LandingPage = () => {
   const [activeComponent, setActiveComponent] = useState("Inicio");
@@ -12,6 +13,10 @@ const LandingPage = () => {
     switch (activeComponent) {
       case "Servicios":
         return <Services />;
+      case "Nosotros":
+        return <AboutUs />;
+      case "Denuncias":
+        return <Complaints />;
       case "Inicio":
       default:
         return <Home />;
@@ -20,7 +25,10 @@ const LandingPage = () => {
 
   return (
     <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
-      <NavBar activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
+      <NavBar
+        activeComponent={activeComponent}
+        setActiveComponent={setActiveComponent}
+      />
       {renderComponent()}
       <Footer />
     </div>
