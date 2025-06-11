@@ -1,33 +1,66 @@
 import datumLogo from "../../../assets/images/logo-negativo.png";
+import footerBackground from "../../../assets/images/footer.png";
+import clock from "../../../assets/images/clock.png";
+import mail from "../../../assets/images/mail.png";
+import phone from "../../../assets/images/phone.png";
+import location from "../../../assets/images/location.png";
+import socialIcon from "../../../assets/images/social-icon.png";
 import map from "../../../assets/images/mapLocation.png";
 
 const Footer = () => {
   return (
-    <div className="flex bg-[#1F1F1F] text-[#FFFFFF] text-[20px] py-40 px-20">
+    <div
+      className="flex bg-[#1F1F1F] text-[#FFFFFF] text-[20px] py-40 px-20 bg-cover bg-center"
+      style={{ backgroundImage: `url(${footerBackground})` }}
+    >
       <div className="flex justify-center flex-col w-1/3">
-        <div className="text-[24px] pb-5">Horarios de atención</div>
+        <div className="text-[24px] pb-5 flex justify-start items-center">
+          <img src={clock} className="h-[26px] mr-[10px]" />
+          Horarios de atención
+        </div>
         <div>Lunes a Jueves: 8:30 a 18:30 hrs</div>
         <div className="pb-15">Viernes: 8:30 a 17:30 hrs</div>
         <div className="text-[24px]">Contacto</div>
-        <div className="pb-3">contacto@datumingenieria.cl</div>
-        <div>+56 9 5819 1499</div>
-        <div className="pb-20">+56 32 2305689</div>
+        <div className="pb-3 flex justify-start">
+          <img src={mail} className="h-[26px] mr-[10px]"/>
+          contacto@datumingenieria.cl
+        </div>
+        <div className="flex justify-start">
+          <img src={phone} className="h-[26px] mr-[10px]"/>
+          +56 9 5819 1499
+        </div>
+        <div className="pb-20 flex justify-start">
+          <img src={phone} className="h-[26px] mr-[10px]"/>
+          +56 32 2305689
+        </div>
         <img src={datumLogo} className="w-3/4" />
       </div>
       <div className="flex flex-col justify-center w-1/3 text-[24px]">
         <img src={map} className="h-2/3 mb-10" />
-        <div>Viana #837, Oficina 216</div>
-        <div>Viña del mar</div>
-        <div>Chile</div>
+        <div className="flex items-center justify-start">
+          <div className="mr-[10px]"> 
+            <img src={location}/>
+          </div>
+          <div>
+            <div>Viana #837, Oficina 216</div>
+            <div className="flex justify-start">Viña del mar</div>
+            <div>Chile</div>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col w-1/3 text-[20px] pl-50">
         <div className="text-[24px] mb-5">Links de interés</div>
-        <div>Reglamento interno</div>
-        <div>Código de ética</div>
-        <div>Reporta un Incidente</div>
-        <div>Haz tu denuncia</div>
-        <div>Preguntas Frecuentes</div>
-        <div>Intranet</div>
+        <ul className="list-disc space-y-1">
+          <li className="font-normal text-[20px] font-bengali">Reglamento interno</li>
+          <li className="font-normal text-[20px] font-bengali">Código de ética</li>
+          <li className="font-normal text-[20px] font-bengali">Reporta un Incidente</li>
+          <li className="font-normal text-[20px] font-bengali">Haz tu denuncia</li>
+          <li className="font-normal text-[20px] font-bengali">Preguntas Frecuentes</li>
+          <li className="font-normal text-[20px] font-bengali">Intranet</li>
+        </ul>
+        <div className="flex justify-center mt-[10px]">
+          <img src={socialIcon} />
+        </div>
       </div>
     </div>
   );

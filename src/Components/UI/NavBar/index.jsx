@@ -23,6 +23,7 @@ const NavBar = ({ activeComponent, setActiveComponent }) => {
               label={option}
               isActive={activeComponent === option}
               onClick={() => setActiveComponent(option)}
+              isContactButton={option === "Contáctanos"}
             />
           ))}
         </div>

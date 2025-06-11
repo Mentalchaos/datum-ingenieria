@@ -5,6 +5,7 @@ import NavBar from "../UI/NavBar";
 import Services from "../Services";
 import AboutUs from "../AboutUs";
 import Complaints from "../Complaints";
+import ContactUs from "../ContactUs";
 
 const LandingPage = () => {
   const [activeComponent, setActiveComponent] = useState("Inicio");
@@ -17,6 +18,8 @@ const LandingPage = () => {
         return <AboutUs />;
       case "Denuncias":
         return <Complaints />;
+      case "Contáctanos":
+        return <ContactUs />;
       case "Inicio":
       default:
         return <Home />;
