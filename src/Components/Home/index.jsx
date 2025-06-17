@@ -12,12 +12,6 @@ const Home = () => {
       <Banner image={home}>
         <UsInfoBox/>
       </Banner>
-      {/* <div className="w-full relative mb-[15em]">
-        <img className="w-full h-[600px]" src={home} />
-        <div className="flex font-[bebas_neue] text-[62px] justify-center pb-20 absolute top-[85%] w-full">
-          <UsInfoBox/>
-        </div>
-      </div> */}
       <LogosSlider />
       <HomeServices />
       <HomeAboutUs />

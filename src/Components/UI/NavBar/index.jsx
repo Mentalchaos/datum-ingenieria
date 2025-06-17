@@ -3,12 +3,12 @@ import NavOption from "./NavOption";
 import { useSearchParams } from "react-router-dom";
 
 const NAVBAR_CONTAINER =
-  "sticky top-0 text-[#181818] font-bold bg-[#ECEBEB] h-[106px] py-[33px] px-[36px] w-full flex shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-50";
+  "sticky top-0 text-[#181818] font-bold bg-[#ECEBEB] h-[91px] w-full flex justify-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-10";
 const NAVBAR_INNER =
-  "relative w-full items-center flex justify-between max-w-[1440px] mx-auto";
-const LOGO_CONTAINER = "w-full h-full";
-const LOGO_IMG = "w-full max-w-[200px] max-h-[100px]";
-const NAV_OPTIONS_CONTAINER = "h-full flex items-center justify-evenly gap-8";
+  "relative w-full items-center flex justify-between max-w-[1440px] h-full mx-auto";
+const LOGO_CONTAINER = "max-w-[300px] h-full flex items-center";
+const LOGO_IMG = "w-full max-w-[300px] h-full";
+const NAV_OPTIONS_CONTAINER = "w-full h-full flex items-center justify-end gap-12";
 
 const NavBar = ({ activeComponent, setActiveComponent }) => {
   const navOptions = [
