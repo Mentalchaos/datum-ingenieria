@@ -85,7 +85,7 @@ const Services = () => {
             <p className="font-bengali font-medium text-[20px] text-center text-[#D9D9D9]">
               {service.description}
             </p>
-            <a href={service.link} className="underline text-white" onClick={() => setSelectedService(service.text)}>
+            <a href={service.link} className="underline text-white cursor-pointer" onClick={() => setSelectedService(service.text)}>
               Ir al servicio
             </a>
           </div>

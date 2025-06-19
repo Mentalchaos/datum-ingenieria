@@ -13,15 +13,18 @@ const Works = () => {
                 <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
                     <p className="font-bengali font-medium text-[20px] text-center">Movimientos de tierra</p>
                     <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">
-                        Lorem ipsum dolor sit amet consectetur. Quam vitae at risus nibh. Nulla ultrices eget fermentum duis. Aliquam maecenas faucibus eget sagittis eget morbi.. Vulputate at sed pretium ac. Lacus ridiculus eros id cursus volutpat tincidunt.. Metus dignissim felis dignissim dui fermentum dignissim enim eros vulputate.. Ipsum pretium dictum amet cursus cursus quam diam morbi.. Amet enim purus auctor turpis. Purus ipsum tempor semper consectetur dui interdum felis aliquet.. Quisque risus nunc ac enim. Viverra enim suspendisse ac sed porttitor tellus donec eu.. Eu tincidunt suspendisse porttitor at id phasellus sit nibh..
-                        Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
+                         Supervisamos y controlamos las actividades de excavación, relleno y nivelación,
+garantizando que se cumplan los planos, especificaciones y normativas de seguridad del
+proyecto.
                     </span>
                 </div>
                 <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
                     <p className="font-bengali font-medium text-[20px] text-center p-[25px]">Paralelismos y atraviesas (MOP y EFE)</p>
                     <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">
-                        Lorem ipsum dolor sit amet consectetur. Quam vitae at risus nibh. Nulla ultrices eget fermentum duis. Aliquam maecenas faucibus eget sagittis eget morbi.. Vulputate at sed pretium ac. Lacus ridiculus eros id cursus volutpat tincidunt.. Metus dignissim felis dignissim dui fermentum dignissim enim eros vulputate.. Ipsum pretium dictum amet cursus cursus quam diam morbi.. Amet enim purus auctor turpis. Purus ipsum tempor semper consectetur dui interdum felis aliquet.. Quisque risus nunc ac enim. Viverra enim suspendisse ac sed porttitor tellus donec eu.. Eu tincidunt suspendisse porttitor at id phasellus sit nibh..
-                        Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
+                        Gestionamos y verificamos la ejecución segura y correcta de obras que se desarrollan
+paralelas o cruzan vías ferroviarias o carreteras, cumpliendo estrictamente con las normas
+del Ministerio de Obras Públicas (MOP) y de la Empresa de Ferrocarriles del Estado
+(EFE).
                     </span>
                 </div>
             </div>
@@ -30,8 +33,9 @@ const Works = () => {
                 <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
                     <p className="font-bengali font-medium text-[20px] text-center">Planes de señalización</p>
                     <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">
-                        Lorem ipsum dolor sit amet consectetur. Quam vitae at risus nibh. Nulla ultrices eget fermentum duis. Aliquam maecenas faucibus eget sagittis eget morbi.. Vulputate at sed pretium ac. Lacus ridiculus eros id cursus volutpat tincidunt.. Metus dignissim felis dignissim dui fermentum dignissim enim eros vulputate.. Ipsum pretium dictum amet cursus cursus quam diam morbi.. Amet enim purus auctor turpis. Purus ipsum tempor semper consectetur dui interdum felis aliquet.. Quisque risus nunc ac enim. Viverra enim suspendisse ac sed porttitor tellus donec eu.. Eu tincidunt suspendisse porttitor at id phasellus sit nibh..
-                        Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
+                        Elaboramos, revisamos e inspeccionamos planes de señalización vial y de obras para
+garantizar la seguridad y fluidez del tránsito, minimizando riesgos para peatones y
+conductores.
                     </span>
                 </div>
             </div>
@@ -40,15 +44,15 @@ const Works = () => {
                 <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
                     <p className="font-bengali font-medium text-[20px] text-center p-[30px]">Construcción de líneas eléctricas MT y BT</p>
                     <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">
-                        Lorem ipsum dolor sit amet consectetur. Quam vitae at risus nibh. Nulla ultrices eget fermentum duis. Aliquam maecenas faucibus eget sagittis eget morbi.. Vulputate at sed pretium ac. Lacus ridiculus eros id cursus volutpat tincidunt.. Metus dignissim felis dignissim dui fermentum dignissim enim eros vulputate.. Ipsum pretium dictum amet cursus cursus quam diam morbi.. Amet enim purus auctor turpis. Purus ipsum tempor semper consectetur dui interdum felis aliquet.. Quisque risus nunc ac enim. Viverra enim suspendisse ac sed porttitor tellus donec eu.. Eu tincidunt suspendisse porttitor at id phasellus sit nibh..
-                        Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
+                        Realizamos la inspección técnica de la instalación de líneas de media (MT) y baja tensión
+(BT), asegurando calidad, cumplimiento normativo y prevención de riesgos eléctricos.
                     </span>
                 </div>
                 <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
                     <p className="font-bengali font-medium text-[20px] text-center">Proyectos viales</p>
                     <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">
-                        Lorem ipsum dolor sit amet consectetur. Quam vitae at risus nibh. Nulla ultrices eget fermentum duis. Aliquam maecenas faucibus eget sagittis eget morbi.. Vulputate at sed pretium ac. Lacus ridiculus eros id cursus volutpat tincidunt.. Metus dignissim felis dignissim dui fermentum dignissim enim eros vulputate.. Ipsum pretium dictum amet cursus cursus quam diam morbi.. Amet enim purus auctor turpis. Purus ipsum tempor semper consectetur dui interdum felis aliquet.. Quisque risus nunc ac enim. Viverra enim suspendisse ac sed porttitor tellus donec eu.. Eu tincidunt suspendisse porttitor at id phasellus sit nibh..
-                        Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
+                        Supervisamos y controlamos la correcta ejecución de proyectos de caminos, carreteras y
+accesos, asegurando el cumplimiento de los estándares técnicos y de seguridad vial.
                     </span>
                 </div>
             </div>

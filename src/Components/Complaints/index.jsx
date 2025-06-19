@@ -53,7 +53,7 @@ const Complaints = () => {
               </p>
             </div>
           </div>
-          <div className="w-[90%] mx-auto pb-[5em]">
+          <div className="w-[90%] mx-auto pb-[8em]">
             <ComplaintsForm />
           </div>
         </div>

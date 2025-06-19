@@ -43,7 +43,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = innovation2)}
               onMouseLeave={e => (e.currentTarget.src = innovation)}
               alt="Innovación"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Innovación</p>
           </div>
@@ -53,7 +53,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = integrity2)}
               onMouseLeave={e => (e.currentTarget.src = integrity)}
               alt="Integridad"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Integridad</p>
           </div>
@@ -63,7 +63,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = responsibility2)}
               onMouseLeave={e => (e.currentTarget.src = responsibility)}
               alt="Responsabilidad"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Responsabilidad</p>
           </div>
@@ -73,7 +73,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = teamwork2)}
               onMouseLeave={e => (e.currentTarget.src = teamwork)}
               alt="Trabajo en equipo"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Trabajo en equipo</p>
           </div>
@@ -83,7 +83,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = ethics2)}
               onMouseLeave={e => (e.currentTarget.src = ethics)}
               alt="Ética"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Ética</p>
           </div>
@@ -93,7 +93,7 @@ const AboutUs = () => {
               onMouseEnter={e => (e.currentTarget.src = social2)}
               onMouseLeave={e => (e.currentTarget.src = social)}
               alt="Responsabilidad Social"
-              className="w-full h-auto cursor-pointer transition-all duration-300"
+              className="w-full h-auto transition-all duration-300"
             />
             <p className="mt-2 font-bengali font-medium text-[16px]">Responsabilidad Social</p>
           </div>

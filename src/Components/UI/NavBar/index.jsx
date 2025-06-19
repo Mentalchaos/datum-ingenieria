@@ -3,7 +3,7 @@ import NavOption from "./NavOption";
 import { useSearchParams } from "react-router-dom";
 
 const NAVBAR_CONTAINER =
-  "sticky top-0 text-[#181818] font-bold bg-[#ECEBEB] h-[91px] w-full flex justify-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-10";
+  "sticky top-0 text-[#181818] font-bold bg-[#ECEBEB] h-[91px] w-full flex justify-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-100";
 const NAVBAR_INNER =
   "relative w-full items-center flex justify-between max-w-[1440px] h-full mx-auto";
 const LOGO_CONTAINER = "max-w-[300px] h-full flex items-center";

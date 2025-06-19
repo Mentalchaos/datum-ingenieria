@@ -9,9 +9,6 @@ import engineering from "../../assets/images/aboutUs/engineering.png";
 import LogosSlider from "../UI/LogosSlider/LogosSlider";
 
 const teamMembers = [
-  { name: "Gerencia TI", img: it },
-  { name: "Gerencia Legal", img: legal },
-  { name: "Gerencia RRHH", img: hr}
 ];
 
 const OurTeam = () => {
@@ -38,9 +35,6 @@ const OurTeam = () => {
         </div>
       </div>
       <div className="flex flex-col w-[90%] items-center mx-auto p-4">
-        <div className="w-[85%] mt-[3em]">
-          <h2 className="font-[bebas_neue] font-normal text-[40px]">Gerencia</h2>
-        </div>
         <div className="flex flex-wrap justify-between py-10 w-[90%]">
         {teamMembers.map((member, index) => (
           <div key={index} className="w-1/5 py-5 flex flex-col items-center">
@@ -70,7 +64,7 @@ const OurTeam = () => {
         <div className="flex flex-row w-[80%] justify-between mt-[8em]">
           <img src={legalDepartment}/>
           <div className="w-[32%] flex items-center">
-            <h2 className="font-[bebas_neue] font-normal text-[64px] text-center content-center">DEPARTAMENTO RRHH y Legal</h2>
+            <h2 className="font-[bebas_neue] font-normal text-[64px] text-center content-center">DEPARTAMENTO ADMINISTRACIÓN</h2>
           </div>
         </div>
       </div>

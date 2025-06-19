@@ -38,7 +38,7 @@ const Timeline = () => {
       <div className="relative flex items-center justify-center w-full max-w-4xl">
         {events.map((event, index) => (
           <div key={index} className="flex items-center relative">
-            <div className="flex items-center justify-center w-18 h-18 border-2 border-[#C30400] rounded-full font-bengali text-[20px] text-black relative group">
+            <div className="flex items-center justify-center w-18 h-18 border-2 border-red-500 rounded-full font-bengali text-[20px] text-black relative group">
               <span className="relative z-10">{event.year}</span>
               {event.tooltip && (
                 <span className="absolute top-full mt-2 bg-[#D9D9D9] text-black font-bengali font-medium text-[20px] text-justify rounded opacity-0 group-hover:opacity-100 transition-opacity w-[510px] p-8 shadow-lg pointer-events-none">
@@ -46,7 +46,7 @@ const Timeline = () => {
                 </span>
               )}
             </div>
-            {index < events.length - 1 && <div className="w-35 h-1 bg-[#C30400]"></div>}
+            {index < events.length - 1 && <div className="w-35 h-1 bg-red-500"></div>}
           </div>
         ))}
       </div>

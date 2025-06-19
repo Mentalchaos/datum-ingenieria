@@ -2,7 +2,7 @@ import phone from "../../../assets/images/contact-phone.png";
 
 const NavOption = ({ label, isActive, onClick, isContactButton }) => {
   const baseClass =
-    "relative font-[roboto] text-xl px-4 py-2 transition-colors duration-300";
+    "relative font-[roboto] text-xl px-4 py-2 transition-colors duration-300 cursor-pointer";
 
   const normalButtonClass = "text-[#181818] hover:text-red-500";
   const contactButtonClass =
