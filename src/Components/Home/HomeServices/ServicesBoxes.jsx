@@ -6,10 +6,10 @@ import renewable from "../../../assets/images/inicio/renewable.svg";
 import road from "../../../assets/images/inicio/road.svg";
 
 const services = [
-  { 
-    text: "Topografía", 
-    image: topo, 
-    width: "w-2/5", 
+  {
+    text: "Topografía",
+    image: topo,
+    width: "w-2/5",
     height: "h-[451px]",
     description: [
       "Ferrocarriles",
@@ -75,7 +75,7 @@ const services = [
 
 const ServicesBoxes = () => {
   return (
-    <div className="text-[#181818] bg-[#E2E2E2] flex flex-wrap justify-around">
+    <div className="text-[#181818] bg-[#EBEBEB] flex flex-wrap justify-around">
       {services.map(({ text, image, width, height, description }, index) => {
         const isReversed = text === "Proyectos Eléctricos" || text === "Inspección técnica de obras";
 

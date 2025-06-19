@@ -47,10 +47,11 @@ const LogosSlider = () => {
 
   return (
     <div
-      className="relative w-full h-[144px] overflow-hidden bg-[white] flex items-center"
-      onMouseEnter={() => setIsPaused(true)} 
+      className="absolute left-0 w-full h-[144px] overflow-hidden bg-[#e3e3e3] flex items-center"
+      onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      <div className="relative w-full h-[144px] overflow-hidden bg-[#e3e3e3] flex items-center">
       {logos.map((logo, i) => (
         <img
           key={i}
@@ -63,6 +64,7 @@ const LogosSlider = () => {
           }}
         />
       ))}
+      </div>
     </div>
   );
 };

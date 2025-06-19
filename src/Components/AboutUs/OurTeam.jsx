@@ -24,10 +24,10 @@ const OurTeam = () => {
         <div className="flex flex-row justify-around h-auto p-[4em_2em] bg-[#EDEDED] shadow-lg rounded-lg w-[90%]">
           <div className="w-[59%] font-bengali font-medium text-[20px] text-justify flex flex-col justify-evenly">
             <p>Fundador de Datum Ingeniería, Ingeniero Geomensor, graduado de la Universidad de Santiago de Chile, con 35 años de experiencia.</p>
-            <p>Su dedicación absoluta, combinada con su profundo compromiso con la excelencia, visión estratégica y pasón por la innovación, 
+            <p>Su dedicación absoluta, combinada con su profundo compromiso con la excelencia, visión estratégica y pasón por la innovación,
               ha llevado a Datum Ingeniería a destcarse a lo largo de los años en todas las actividades de su competencia.
             </p>
-            <p>Actualmente, ocupa el cargo de CEO y el de Gerencia General, liderando un gan equipo de profesionales comprometidos, 
+            <p>Actualmente, ocupa el cargo de CEO y el de Gerencia General, liderando un gan equipo de profesionales comprometidos,
               altamente calificados y especializados
             </p>
           </div>

@@ -11,6 +11,7 @@ import Works from "./Works";
 import Road from "./Road";
 import RenewableEnergies from "./RenewableEnergies";
 import Electric from "./Electric";
+import Banner from "../UI/Banner";
 
 const servicesInfo = [
   {
@@ -94,19 +95,22 @@ const Services = () => {
   };
 
   return (
-    <div className="flex flex-col items-center text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
-      {selectedService == null && <div className="flex flex-col items-center">
-        <div className="flex justify-center mt-[8em]">
-          <img src={services} alt="servicios" className="h-[90vh] w-full" />
-        </div>
-        <div className="flex justify-center gap-15 px-10 py-10 w-full max-w-[1400px]">
-          {servicesInfo.slice(0, 3).map((service, index) => renderCard(service, index))}
-        </div>
-        <div className="flex justify-center gap-15 px-10 pb-20 w-full max-w-[1400px]">
-          {servicesInfo.slice(3).map((service, index) => renderCard(service, index + 3))}
-        </div>
-      </div>}
-      {renderComponent()}
+    <div>
+      <div className="flex flex-col items-center text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh mb-10">
+        {selectedService == null && <div className="flex flex-col items-center">
+          {/* <div className="flex justify-center mt-[8em]">
+            <img src={services} alt="servicios" className="h-[90vh] w-full" />
+          </div> */}
+          <Banner image={services} />
+          <div className="flex justify-center gap-15 px-10 py-10 w-full max-w-[1400px]">
+            {servicesInfo.slice(0, 3).map((service, index) => renderCard(service, index))}
+          </div>
+          <div className="flex justify-center gap-15 px-10 pb-20 w-full max-w-[1400px]">
+            {servicesInfo.slice(3).map((service, index) => renderCard(service, index + 3))}
+          </div>
+        </div>}
+        {renderComponent()}
+      </div>
       <LogosSlider />
     </div>
   );

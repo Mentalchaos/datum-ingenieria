@@ -8,7 +8,7 @@ const NAVBAR_INNER =
   "relative w-full items-center flex justify-between max-w-[1440px] h-full mx-auto";
 const LOGO_CONTAINER = "max-w-[300px] h-full flex items-center";
 const LOGO_IMG = "w-full max-w-[300px] h-full";
-const NAV_OPTIONS_CONTAINER = "w-full h-full flex items-center justify-end gap-12";
+const NAV_OPTIONS_CONTAINER = "w-full h-full flex items-center justify-end gap-12 pr-5";
 
 const NavBar = ({ activeComponent, setActiveComponent }) => {
   const navOptions = [

@@ -36,7 +36,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
+    <div className="text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh">
       <NavBar
         activeComponent={activeComponent}
         setActiveComponent={setActiveComponent}

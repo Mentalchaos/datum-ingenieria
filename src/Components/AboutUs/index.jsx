@@ -14,13 +14,13 @@ import teamwork2 from "../../assets/images/aboutUs/teamwork-hover.png";
 import OurTeam from "./OurTeam";
 import MisionVision from "../Home/MisionVision/misionVision";
 import Timeline from "../Home/TimeLine";
+import Banner from "../UI/Banner";
+
 
 const AboutUs = () => {
   return (
     <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
-      <div className="w-full mt-[6em]">
-        <img className="w-full h-[600px]" src={team} />
-      </div>
+      <Banner image={team} />
 
       <div className="flex text-[24px] justify-center pb-20 w-full items-center">
         <div className="font-bengali pt-22 tracking-wider w-[75%] text-justify">

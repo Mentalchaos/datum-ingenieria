@@ -18,39 +18,30 @@ const numbers = [
 
 const HomeAboutUs = () => {
   return (
-    <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] py-12 px-10">
-      <div className="flex justify-center font-bebas text-[64px] pb-10">
+    <div className="text-[#181818] bg-[#EBEBEB] font-[roboto] py-12 px-10">
+      <div className="flex justify-center font-bebas text-[64px]">
         sobre nosotros
       </div>
       <InfoBox width="w-full" height="h-[821]">
-        <div className="flex items-center text-[20px] justify-evenly h-1/2 pt-10 px-8 pb-8">
+        <div className="flex items-start text-[20px] justify-evenly h-1/2 pt-10 px-8 pb-8">
           <img
             alt="us"
             className="h-full object-cover rounded-md w-[55%]"
             src={us}
           />
-          <div className="w-[45%] p-[3em] text-justify font-bengali flex justify-center">
+          <div className="w-[40%] text-justify font-bengali flex justify-center">
             <div>
-              <div className="font-bengali font-medium text-[20px] leading-[100%] tracking-[4%] text-justify text-gray-800 space-y-2">
-                <p>Fundada en el año 1999, Datum Ingeniería,</p>
-                <p>cuenta con una gran trayectoria y experiencia,</p>
-                <p>participando y desarrollando proyectos en</p>
-                <p className="mb-10">diversas áreas de la Ingeniería.</p>
-
-                <p>Nuestra empresa se enorgullece de contar con</p>
-                <p>un sólido historial respaldado por números</p>
-                <p>que hablan por sí mismos. Con una amplia</p>
-                <p>cartera de proyectos exitosos en nuestro haber,</p>
-                <p>hemos demostrado nuestra experiencia y</p>
-                <p>capacidad una y otra vez.</p>
+              <div className="font-bengali font-medium text-[18px] leading-[100%] tracking-[4%] text-justify text-gray-800">
+                <p className="mb-5 leading-[1.5]">Fundada en el año 1999, Datum Ingeniería, cuenta con una gran trayectoria y experiencia, participando y desarrollando proyectos en diversas áreas de la Ingeniería.</p>
+                <p className="leading-[1.5]">Nuestra empresa se enorgullece de contar con un sólido historial respaldado por números que hablan por sí mismos. Con una amplia cartera de proyectos exitosos en nuestro haber, hemos demostrado nuestra experiencia y capacidad una y otra vez.</p>
               </div>
             </div>
           </div>
         </div>
         <div className="h-1/2 text-[20px] flex flex-col items-center font-bengali px-8">
           <div>
-            Cada proyecto completado es un testimonio de nuestro compromiso con la excelencia y la 
-            satisfacción del cliente. En Datum, nuestros números hablan de la dedicación y habilidad para 
+            Cada proyecto completado es un testimonio de nuestro compromiso con la excelencia y la
+            satisfacción del cliente. En Datum, nuestros números hablan de la dedicación y habilidad para
             llevar a cabo proyectos de manera exitosa y confiable.
           </div>
           <div className="flex justify-evenly pt-10 pb-[3em] w-[80%]">
