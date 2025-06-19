@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Home from "../Home";
 import Footer from "../UI/Footer/Footer";
 import NavBar from "../UI/NavBar";
@@ -8,7 +9,15 @@ import Complaints from "../Complaints";
 import ContactUs from "../ContactUs";
 
 const LandingPage = () => {
-  const [activeComponent, setActiveComponent] = useState("Inicio");
+  const [searchParams] = useSearchParams();
+  const pageParam = searchParams.get("page");
+  const [activeComponent, setActiveComponent] = useState(pageParam || "Inicio");
+
+  useEffect(() => {
+    if (pageParam && pageParam !== activeComponent) {
+      setActiveComponent(pageParam);
+    }
+  }, [pageParam]);
 
   const renderComponent = () => {
     switch (activeComponent) {
@@ -27,12 +36,14 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
+    <div className="text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh">
       <NavBar
         activeComponent={activeComponent}
         setActiveComponent={setActiveComponent}
       />
-      {renderComponent()}
+      <div className="max-w-[1440px] mx-auto">
+        {renderComponent()}
+      </div>
       <Footer />
     </div>
   );

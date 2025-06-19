@@ -18,8 +18,7 @@ const ContactForm = () => {
           className="shadow-lg rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"
         >
           <div className="flex h-full pt-20">
-
-            <div className="flex flex-col justify-between w-1/2 px-30 h-3/4">
+            <div className="flex flex-col justify-between w-1/2 h-3/4 px-5">
               {inputFields.map(({ label, placeholder }, index) => (
                 <div key={label} className={`w-full ${index !== inputFields.length - 1 ? "mb-10" : ""}`}>
                   <label className="block font-bengali font-medium text-[20px] text-[#181818] mb-2">
@@ -30,7 +29,7 @@ const ContactForm = () => {
               ))}
             </div>
 
-            <div className="flex flex-col w-1/2 px-30 h-3/4">
+            <div className="flex flex-col w-1/2 px-5 h-3/4">
               <div className="w-full mb-10">
                 <label className="block font-bengali font-medium text-[20px] text-[#181818] mb-2">
                   Asunto
