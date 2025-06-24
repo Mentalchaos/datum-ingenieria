@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import services from "../../assets/images/servicesPage/services-banner.png";
 import topo from "../../assets/images/inicio/Group1.png";
 import electric from "../../assets/images/inicio/electricos.png";
@@ -17,27 +17,32 @@ const servicesInfo = [
   {
     text: "Topografía",
     image: topo,
-    description: "Descripción detallada de Topografía."
+    description: "Descripción detallada de Topografía.",
+    serviceName: "topography"
   },
   {
     text: "Inspección técnica de obras",
     image: inspection,
-    description: "Descripción detallada de Inspección técnica de obras."
+    description: "Descripción detallada de Inspección técnica de obras.",
+    serviceName: "inspection"
   },
   {
     text: "Proyectos Viales",
     image: road,
-    description: "Descripción detallada de Proyectos Viales."
+    description: "Descripción detallada de Proyectos Viales.",
+    serviceName: "road"
   },
   {
     text: "Energías Renovables",
     image: renewable,
-    description: "Descripción detallada de Energías Renovables."
+    description: "Descripción detallada de Energías Renovables.",
+    serviceName: "renewable"
   },
   {
     text: "Proyectos Eléctricos",
     image: electric,
-    description: "Descripción detallada de Proyectos Eléctricos."
+    description: "Descripción detallada de Proyectos Eléctricos.",
+    serviceName: "electric"
   },
 ];
 
@@ -45,28 +50,58 @@ const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedService, setSelectedService] = useState(null);
 
-  const renderComponent = () => {
-    switch (selectedService) {
-      case "Topografía":
-        return <Topography />
-      case "Inspección técnica de obras":
-        return <Works />;
-      case "Proyectos Viales":
-        return <Road />;
-      case "Energías Renovables":
-        return <RenewableEnergies />;
-      case "Proyectos Eléctricos":
-        return <Electric />;
-      default:
-        return null;
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+
+    if (serviceParam) {
+      setSelectedService(serviceParam);
     }
+
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+
+      if (serviceParam) {
+        setSelectedService(serviceParam);
+      } else {
+        setSelectedService(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+
+  const renderComponent = () => {
+    const CASES = {
+      "topography": <Topography onBack={() => setSelectedService(null)}/>,
+      "inspection": <Works onBack={() => setSelectedService(null)}/>,
+      "road": <Road onBack={() => setSelectedService(null)}/>,
+      "renewable": <RenewableEnergies onBack={() => setSelectedService(null)}/>,
+      "electric": <Electric onBack={() => setSelectedService(null)}/>,
+      "default": null
+    }
+
+    return CASES[selectedService] || null;
+  };
+
+  const onSelectService = (serviceName) => {
+    setSelectedService(serviceName);
+    const url = new URL(window.location);
+    url.searchParams.set('service', serviceName);
+    window.history.pushState({}, "", url.toString());
   };
 
   const renderCard = (service, index) => {
     return (
       <div
         key={index}
-        className="relative w-1/3 h-[452px] overflow-hidden rounded-[5px] shadow-md"
+        className="relative w-1/3 h-[452px] overflow-hidden rounded-[5px] shadow-md cursor-pointer transition-all"
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
       >
@@ -85,7 +120,7 @@ const Services = () => {
             <p className="font-bengali font-medium text-[20px] text-center text-[#D9D9D9]">
               {service.description}
             </p>
-            <a href={service.link} className="underline text-white cursor-pointer" onClick={() => setSelectedService(service.text)}>
+            <a href={service.link} className="underline text-white cursor-pointer" onClick={() => onSelectService(service.serviceName)}>
               Ir al servicio
             </a>
           </div>
@@ -98,9 +133,6 @@ const Services = () => {
     <div>
       <div className="flex flex-col items-center text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh mb-10">
         {selectedService == null && <div className="flex flex-col items-center">
-          {/* <div className="flex justify-center mt-[8em]">
-            <img src={services} alt="servicios" className="h-[90vh] w-full" />
-          </div> */}
           <Banner image={services} />
           <div className="flex justify-center gap-15 px-10 py-10 w-full max-w-[1400px]">
             {servicesInfo.slice(0, 3).map((service, index) => renderCard(service, index))}

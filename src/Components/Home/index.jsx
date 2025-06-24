@@ -9,7 +9,7 @@ import Banner from "../UI/Banner/index.jsx";
 const Home = () => {
   return (
     <div className="text-[#181818] bg-[#EDEDED] font-[roboto] min-h-svh">
-      <Banner image={home}>
+      <Banner image={home} isBlack={true}>
         <UsInfoBox/>
       </Banner>
       <LogosSlider />
