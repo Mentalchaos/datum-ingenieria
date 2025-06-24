@@ -46,24 +46,26 @@ const LogosSlider = () => {
   }, [isPaused]);
 
   return (
-    <div
-      className="absolute left-0 w-full h-[144px] overflow-hidden bg-[#e3e3e3] flex items-center"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      <div className="relative w-full h-[144px] overflow-hidden bg-[#e3e3e3] flex items-center">
-      {logos.map((logo, i) => (
-        <img
-          key={i}
-          src={logo}
-          alt="Logo"
-          className="absolute transition-opacity duration-500"
-          style={{
-            left: `${positions[i].left}px`,
-            opacity: positions[i].opacity,
-          }}
-        />
-      ))}
+    <div className="relative h-[144px]">
+      <div
+        className="absolute left-0 w-full h-[144px] overflow-hidden bg-[#E2E2E2] flex items-center"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="relative w-full h-[144px] overflow-hidden bg-[#E2E2E2] flex items-center">
+        {logos.map((logo, i) => (
+          <img
+            key={i}
+            src={logo}
+            alt="Logo"
+            className="absolute transition-opacity duration-500"
+            style={{
+              left: `${positions[i].left}px`,
+              opacity: positions[i].opacity,
+            }}
+          />
+        ))}
+        </div>
       </div>
     </div>
   );

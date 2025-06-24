@@ -10,7 +10,7 @@ import map from "../../../assets/images/mapLocation.png";
 const Footer = () => {
   return (
     <div
-      className="flex bg-[#1F1F1F] text-[#FFFFFF] text-[20px] py-40 px-20 bg-cover bg-center"
+      className="flex bg-[#1F1F1F] text-[#FFFFFF] py-20 px-30 bg-cover bg-center"
       style={{ backgroundImage: `url(${footerBackground})` }}
     >
       <div className="flex justify-center flex-col w-1/3">
@@ -35,28 +35,28 @@ const Footer = () => {
         </div>
         <img src={datumLogo} className="w-3/4" />
       </div>
-      <div className="flex flex-col justify-center w-1/3 text-[24px]">
+      <div className="flex flex-col justify-center w-[55%] text-[1em] pl-30">
         <img src={map} className="h-2/3 mb-10" />
         <div className="flex items-center justify-start">
-          <div className="mr-[10px]"> 
+          <div className="mr-[10px]">
             <img src={location}/>
           </div>
-          <div>
+          <div className="pl-5">
             <div>Viana #837, Oficina 216</div>
             <div className="flex justify-start">Viña del mar</div>
             <div>Chile</div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-1/3 text-[20px] pl-50">
+      <div className="flex flex-col w-1/3 text-[1em] pl-30 pt-20">
         <div className="text-[24px] mb-5">Links de interés</div>
-        <ul className="list-disc space-y-1">
-          <li className="font-normal text-[20px] font-bengali">Reglamento interno</li>
-          <li className="font-normal text-[20px] font-bengali">Código de ética</li>
-          <li className="font-normal text-[20px] font-bengali">Reporta un Incidente</li>
-          <li className="font-normal text-[20px] font-bengali">Haz tu denuncia</li>
-          <li className="font-normal text-[20px] font-bengali">Preguntas Frecuentes</li>
-          <li className="font-normal text-[20px] font-bengali">Intranet</li>
+        <ul className="list-disc space-y-1 pl-10">
+          <li className="font-normal text-[1em] font-bengali">Reglamento interno</li>
+          <li className="font-normal text-[1em] font-bengali">Código de ética</li>
+          <li className="font-normal text-[1em] font-bengali">Reporta un Incidente</li>
+          <li className="font-normal text-[1em] font-bengali">Haz tu denuncia</li>
+          <li className="font-normal text-[1em] font-bengali">Preguntas Frecuentes</li>
+          <li className="font-normal text-[1em] font-bengali">Intranet</li>
         </ul>
         <div className="flex justify-center mt-[10px]">
           <img src={socialIcon} />

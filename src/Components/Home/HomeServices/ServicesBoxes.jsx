@@ -9,8 +9,10 @@ const services = [
   {
     text: "Topografía",
     image: topo,
-    width: "w-2/5",
+    width: "w-[47%]",
     height: "h-[451px]",
+    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
     description: [
       "Ferrocarriles",
       "GPS y Geodesia",
@@ -23,8 +25,10 @@ const services = [
   },
   { text: "Proyectos Eléctricos",
     image: electric,
-    width: "w-3/5",
+    width: "w-[53%]",
     height: "h-[451px]",
+    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
     description: [
       "Mallas a tierra",
       "Proyectos de distribución para redes de MT y BT",
@@ -36,8 +40,10 @@ const services = [
   },
   { text: "Inspección técnica de obras",
     image: inspection,
-    width: "w-3/5",
+    width: "w-[55%]",
     height: "h-[451px]",
+    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
     description: [
       "Construcción de líneas eléctricas MT y BT",
       "Paralelismo y atraviesos (MOP y EFE)",
@@ -48,8 +54,10 @@ const services = [
   },
   { text: "Proyectos Viales",
     image: road,
-    width: "w-2/5",
+    width: "w-[45%]",
     height: "h-[451px]",
+    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
     description: [
       "Diseño de planes de señalización",
       "Proyectos de paralelismo y atraviesos (MOP y EFE)",
@@ -59,8 +67,10 @@ const services = [
   },
   { text: "Energías Renovables",
     image: renewable,
-    width: "w-3/4",
+    width: "w-[85%]",
     height: "h-[451px]",
+    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    itemClass: "text-[1em] w-[400px] mb-[1em]",
     description: [
       "Planos de servidumbre",
       "Cálculo para movimiento de tierra (Cubicación y plataforma)",
@@ -75,8 +85,8 @@ const services = [
 
 const ServicesBoxes = () => {
   return (
-    <div className="text-[#181818] bg-[#EBEBEB] flex flex-wrap justify-around">
-      {services.map(({ text, image, width, height, description }, index) => {
+    <div className="text-[#181818] bg-[#EDEDED] flex flex-wrap justify-around">
+      {services.map(({ text, image, width, height, description, listClass, itemClass }, index) => {
         const isReversed = text === "Proyectos Eléctricos" || text === "Inspección técnica de obras";
 
         return (
@@ -84,31 +94,31 @@ const ServicesBoxes = () => {
             <div className="flex h-full gap-4">
               {isReversed ? (
                 <>
-                  <div className="w-[60%] flex flex-col justify-around">
-                    {text && <p className="text-[40px] font-[bebas_neue] text-[#000000]">{text}</p>}
+                  <div className="w-[70%] flex flex-col justify-around">
+                    {text && <p className="text-[2.1em] font-[bebas_neue] text-[#000000]">{text}</p>}
                     {description && (
-                      <ul className="text-sm text-gray-700 list-disc pl-5 font-inter h-[70%] flex flex-col justify-around">
+                      <ul className={listClass}>
                         {description.map((item, i) => (
-                          <li key={i}>{item}</li>
+                          <li key={i} className={itemClass}>{item}</li>
                         ))}
                       </ul>
                     )}
                   </div>
-                  <div className="w-[40%] h-full flex items-center">
-                    {image && <img alt={text} className="w-full h-[90%] object-cover rounded-md" src={image} />}
+                  <div className="w-[70%] h-full flex items-center">
+                    {image && <img alt={text} className="w-full h-[100% object-cover rounded-md" src={image} />}
                   </div>
                 </>
               ) : (
                 <>
-                  <div className="w-[40%] h-full flex items-center">
-                    {image && <img alt={text} className="w-full h-[90%] object-cover rounded-md" src={image} />}
+                  <div className="w-[50%] flex items-center">
+                    {image && <img alt={text} className="w-full h-[100%] p-[2em]" src={image} />}
                   </div>
-                  <div className="w-[60%] flex flex-col justify-around">
-                    {text && <p className="text-[40px] font-[bebas_neue] text-[#000000]">{text}</p>}
+                  <div className="w-[250px] flex flex-col justify-around">
+                    {text && <p className="text-[2.1em] font-[bebas_neue] text-[#000000]">{text}</p>}
                     {description && (
-                      <ul className="text-sm text-gray-700 list-disc pl-5 font-inter h-[70%] flex flex-col justify-around">
+                      <ul className={listClass}>
                         {description.map((item, i) => (
-                          <li key={i}>{item}</li>
+                          <li key={i} className={itemClass}>{item}</li>
                         ))}
                       </ul>
                     )}

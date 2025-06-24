@@ -15,9 +15,9 @@ const ContactForm = () => {
     <div className="font-roboto">
       <div className="w-full h-auto relative">
         <div
-          className="shadow-lg rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"
+          className="border-2 border-[#E2E2E2] rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"
         >
-          <div className="flex h-full pt-20">
+          <div className="flex h-full pt-10">
             <div className="flex flex-col justify-between w-1/2 h-3/4 px-5">
               {inputFields.map(({ label, placeholder }, index) => (
                 <div key={label} className={`w-full ${index !== inputFields.length - 1 ? "mb-10" : ""}`}>
@@ -42,7 +42,7 @@ const ContactForm = () => {
                 </label>
                 <Input
                   placeholder="Escribe tu mensaje aquí"
-                  className="w-full h-[259px]"
+                  className="w-full h-[280px]"
                   type="textarea"
                 />
               </div>
