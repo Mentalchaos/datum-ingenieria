@@ -12,18 +12,34 @@ const NAV_OPTIONS_CONTAINER = "w-full h-full flex items-center justify-end gap-1
 
 const NavBar = ({ activeComponent, setActiveComponent }) => {
   const navOptions = [
-    "Inicio",
-    "Servicios",
-    "Nosotros",
-    "Denuncias",
-    "Contáctanos",
+    {
+      label: "Inicio",
+      value: "Home",
+    },
+    {
+      label: "Servicios",
+      value: "Services",
+    },
+    {
+      label: "Nosotros",
+      value: "About",
+    },
+    {
+      label: "Denuncias",
+      value: "Complaints",
+    },
+    {
+      label: "Contáctanos",
+      value: "Contact",
+    },
   ];
+
 
   const [_, setSearchParams] = useSearchParams();
 
   const handleNavClick = (option) => {
     setActiveComponent(option);
-    if (option === "Inicio") {
+    if (option === "Home") {
       setSearchParams({});
     } else {
       setSearchParams({ page: option });
@@ -39,10 +55,10 @@ const NavBar = ({ activeComponent, setActiveComponent }) => {
         <div className={NAV_OPTIONS_CONTAINER}>
           {navOptions.map((option) => (
             <NavOption
-              key={option}
-              label={option}
-              isActive={activeComponent === option}
-              onClick={() => handleNavClick(option)}
+              key={option.value}
+              label={option.label}
+              isActive={activeComponent === option.value}
+              onClick={() => handleNavClick(option.value)}
               isContactButton={option === "Contáctanos"}
             />
           ))}

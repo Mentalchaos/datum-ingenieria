@@ -24,7 +24,7 @@ const MisionVision = () => {
       {info.map(({ title, img, description, height }, index) => (
         <div key={index} className="w-[47%]">
           <p className="font-bebas text-center text-[40px]">{title}</p>
-          <div className="group bg-[#EDEDED] p-4 h-[376px] rounded-[10px] flex justify-center items-center relative">
+          <div className="group bg-[#EDEDED] p-4 h-[376px] rounded-[10px] flex justify-center items-center relative border-2 border-[#E2E2E2]">
             <img
               src={img}
               alt={title}

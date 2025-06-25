@@ -19,10 +19,10 @@ import Banner from "../UI/Banner";
 
 const AboutUs = () => {
   return (
-    <div className="text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh">
+    <div className="text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh">
       <Banner image={team} />
 
-      <div className="flex text-[24px] justify-center pb-20 w-full items-center">
+      <div className="flex text-[1.3em] justify-center pb-20 w-full items-center">
         <div className="font-bengali pt-22 tracking-wider w-[75%] text-justify">
           En Datum Ingeniería nuestras acciones y metas están impulsadas por una visión clara y una misión sólida.
           Como empresa comprometida con la excelencia en todos nuestros servicios, nuestra orientación estratégica
@@ -33,7 +33,7 @@ const AboutUs = () => {
 
       <MisionVision />
 
-      <div className="font-[bebas_neue] font-normal text-[64px] leading-[100%] text-center flex flex-col items-center justify-between my-[3em] h-auto">
+      <div className="font-[bebas_neue] font-normal text-[64px] leading-[100%] text-center flex flex-col items-center justify-between h-auto">
         <p>MARCO VALÓRICO</p>
 
         <div className="grid grid-cols-3 gap-8 mt-[1.5em]">

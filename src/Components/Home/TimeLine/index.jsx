@@ -31,7 +31,7 @@ const Timeline = () => {
   return (
     <div className="flex flex-col items-center p-8 h-[380px] justify-between pb-[5em]">
       <h2 className="text-[64px] font-[bebas_neue] text-[#000000] mb-6">HISTORIA</h2>
-      <p className="text-[40px] font-[bebas_neue] text-[#000000] mb-6">
+      <p className="text-[40px] font-[bebas_neue] text-[#000000] mb-[2em]">
         UN LARGO CAMINO DE DESAFÍOS Y EXPERIENCIAS ADQUIRIDAS
       </p>
 

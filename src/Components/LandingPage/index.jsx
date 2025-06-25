@@ -21,15 +21,15 @@ const LandingPage = () => {
 
   const renderComponent = () => {
     switch (activeComponent) {
-      case "Servicios":
+      case "Services":
         return <Services />;
-      case "Nosotros":
+      case "About":
         return <AboutUs />;
-      case "Denuncias":
+      case "Complaints":
         return <Complaints />;
-      case "Contáctanos":
+      case "Contact":
         return <ContactUs />;
-      case "Inicio":
+      case "Home":
       default:
         return <Home />;
     }

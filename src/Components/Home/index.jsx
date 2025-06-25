@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="text-[#181818] bg-[#EDEDED] font-[roboto] min-h-svh">
       <Banner image={home} isBlack={true}>
-        <UsInfoBox/>
+        <UsInfoBox />
       </Banner>
       <LogosSlider />
       <HomeServices />

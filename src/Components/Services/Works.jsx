@@ -33,7 +33,7 @@ const Works = ({ onBack }) => {
 				</div>
 			</div>
 
-			<div className="flex w-[90%] my-[8em] justify-center flex-wrap">
+			<div className="flex w-[90%] my-[5em] justify-center flex-wrap">
 				<div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
 					<p className="font-bengali font-medium text-[20px] text-center">Planes de señalización</p>
 					<div className="hidden group-hover:block absolute top-[70%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10 border border-gray-300">
@@ -44,7 +44,7 @@ const Works = ({ onBack }) => {
 				</div>
 			</div>
 
-			<div className="flex w-[60%] mx-auto justify-between mb-[8em] gap-4 flex-wrap">
+			<div className="flex w-[60%] mx-auto justify-between mb-[5em] gap-4 flex-wrap">
 				<div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
 					<p className="font-bengali font-medium text-[20px] text-center p-[30px]">Construcción de líneas eléctricas MT y BT</p>
 					<div className="hidden group-hover:block absolute top-[70%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10 border border-gray-300">

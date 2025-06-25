@@ -39,7 +39,7 @@ const Electric = ({ onBack }) => {
         </div>
       </div>
 
-      <div className="flex w-[90%] mb-[8em] mt-[3em] justify-between gap-4 flex-wrap">
+      <div className="flex w-[90%] mb-[5em] mt-[3em] justify-between gap-4 flex-wrap">
         <div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
           <p className="font-bengali font-medium text-[20px] text-center p-[25px]">Proyectos cruces con líneas de AT y MT de terceros</p>
           <span className="hidden group-hover:flex absolute top-[150%] left-1/2 transform -translate-x-1/2 w-[687px] h-[346px] bg-[#EDEDED] text-black font-bengali font-medium text-[16px] text-center items-center justify-center p-4 shadow-lg z-10">

@@ -104,27 +104,28 @@ const Services = () => {
         className="relative w-1/3 h-[452px] overflow-hidden rounded-[5px] shadow-md cursor-pointer transition-all"
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => onSelectService(service.serviceName)}
       >
-        <div className="flex flex-col justify-around items-center bg-[#EDEDED] w-full h-full p-4 z-0">
-          <img src={service.image} alt={service.text} className="object-contain max-h-[60%]" />
-          <h2 className="font-[bebas_neue] font-normal text-[40px] text-center text-[#181818]">
-            {service.text}
-          </h2>
-        </div>
+        <div className="bg-[#EDEDED] w-full h-full p-4 z-0">
+          <div id="service-card-content" className="flex flex-col justify-around items-center h-full">
+            <img src={service.image} alt={service.text} className="object-contain max-h-[60%]" />
+            <h2 className="font-[bebas_neue] font-normal text-[40px] text-center text-[#181818]">
+              {service.text}
+            </h2>
+          </div>
 
-        {hoveredIndex === index && (
-          <div className="absolute inset-0 bg-black/60 text-white flex flex-col justify-around items-center p-4 transition-all duration-300 z-10">
+          <div className="absolute inset-0 bg-black/70 text-white flex flex-col justify-around items-center p-4 transition-all duration-300 z-10 opacity-0 hover:opacity-100">
             <h2 className="font-[bebas_neue] font-normal text-[40px] text-center text-[#D9D9D9]">
               {service.text}
             </h2>
-            <p className="font-bengali font-medium text-[20px] text-center text-[#D9D9D9]">
+            <p className="font-bengali font-medium text-[20px] text-center text-[#D9D9D9]">5
               {service.description}
             </p>
-            <a href={service.link} className="underline text-white cursor-pointer" onClick={() => onSelectService(service.serviceName)}>
+            <div className="underline text-white cursor-pointer">
               Ir al servicio
-            </a>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     );
   };

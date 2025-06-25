@@ -6,32 +6,42 @@ import ComplaintsForm from "./complaintsForm";
 import CrimesToReport from "./crimesToReport";
 import Banner from "../UI/Banner";
 
+const WhatIsAComplaintChannel = () => {
+  return (
+    <div className="h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED] text-[1.6em] font-bengali">
+      Es un medio por el cual cualquier colaborador de Datum Ingeniería y relacionadas, además de terceros,
+      pueden realizar sus denuncias ante incumplimientos relacionados al Modelo de Prevención de Delitos, Código de Ética,
+      Reglamento Interno de Orden, Higiene y Seguridad, u otra normativa interna.
+    </div>
+  )
+}
+
+
 const Complaints = () => {
-  const [showInfo, setShowInfo] = useState(false);
-  const [showCrimes, setShowCrimes] = useState(false);
+  const [ activeComponent, setActiveComponent ] = useState(null);
 
   return (
     <div>
       <section className="w-full min-h-screen flex flex-col items-center mb-10">
         <Banner image={complaints} />
 
-        <h1 className="text-center font-[bebas_neue] text-[64px] py-20">
+        <h1 className="text-center font-[bebas_neue] text-[3em] py-10">
           Queremos escuchar lo que tienes que decir
         </h1>
-        <p className="text-center text-[36px] py-20 text-[#313131] px-10 font-bengali w-[77%] mx-auto text-justify">
+        <p className="text-[1.8em] text-[#313131] px-10 font-bengali w-[77%] mx-auto text-justify mb-10">
           En DATUM Ingeniería valoramos una relación abierta y cercana con
           nuestros trabajadores, colaboradores y comunidades. Por ello, hemos
           establecido este canal de comunicación.
         </p>
         <div className="shadow-[0px_0px_3px_0px_#0000003B] rounded-[10px] w-[95%] mb-[8em] bg-[#EDEDED]">
-          <h2 className="text-center text-[40px] font-[bebas_neue] mt-[2em]">
+          <h2 className="text-center text-[3em] font-[bebas_neue] mt-[1em]">
             ¿Cómo hacer una denuncia?
           </h2>
-          <p className="text-center py-10 text-[20px] font-bengali px-10">
+          <p className="text-center py-10 text-[1.3em] font-bengali px-10">
             A continuación, en el formulario podrás ingresar tu denuncia. Te
             solicitamos nos entregues la siguiente información:
           </p>
-          <div className="flex justify-center items-start px-10 pb-20 gap-10 items-center">
+          <div className="flex justify-center px-10 pb-20 gap-10 items-center">
             <div className="w-1/2 h-[276px] p-[calc(var(--spacing)*5)]">
               <ul className="list-disc pl-5 text-[20px] font-bengali leading-relaxed">
                 <li>Nombre del denunciado</li>
@@ -57,40 +67,27 @@ const Complaints = () => {
             <ComplaintsForm />
           </div>
         </div>
-        <div className="flex w-full px-10 pb-30">
-          <InfoBox width="w-1/2" height="h-[363px]">
+
+
+        <div className="flex w-full px-10 pb-20">
+          <InfoBox width="w-1/2" height="h-[363px]" onClick={() => setActiveComponent(<WhatIsAComplaintChannel />)}>
             <div
               className="flex justify-center items-center h-full text-[40px] font-[bebas_neue] text-center cursor-pointer"
-              onClick={() => setShowInfo(true)}
             >
-              {!showInfo ? (
-                <span>¿Qué es un canal de denuncias?</span>
-              ) : (
-                <span
-                  className="font-bengali font-medium text-[24px] text-justify w-[80%] opacity-100 transition-opacity duration-700 ease-in-out"
-                  onMouseLeave={() => setShowInfo(false)}
-                >
-                  Es un medio por el cual cualquier colaborador de Datum Ingeniería y relacionadas, además de terceros,
-                  pueden realizar sus denuncias ante incumplimientos relacionados al Modelo de Prevención de Delitos, Código de Ética,
-                  Reglamento Interno de Orden, Higiene y Seguridad, u otra normativa interna.
-                </span>
-              )}
+              <span>¿Qué es un canal de denuncias?</span>
             </div>
           </InfoBox>
-          <InfoBox width="w-1/2" height="h-[363px]">
+          <InfoBox width="w-1/2" height="h-[363px]" onClick={() => setActiveComponent(<CrimesToReport />)}>
             <div
               className="flex justify-center relative items-center h-full text-[40px] font-[bebas_neue] text-center cursor-pointer"
-              onClick={() => setShowCrimes(true)}
             >
-              {!showCrimes ? (
-                <span>¿Qué debo denunciar?</span>
-              ) : (
-                <div className="w-full" onMouseLeave={() => setShowCrimes(false)}>
-                  <CrimesToReport />
-                </div>
-              )}
+              <span>¿Qué debo denunciar?</span>
             </div>
           </InfoBox>
+        </div>
+
+        <div className="w-full">
+          {activeComponent}
         </div>
       </section>
       <LogosSlider />

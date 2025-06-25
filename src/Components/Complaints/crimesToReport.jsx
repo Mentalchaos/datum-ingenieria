@@ -1,10 +1,10 @@
 const CrimesToReport = () => {
     return (
-      <div className="w-[220%] h-auto absolute top-[-25px] right-[-25px] rounded-[10px] pt-[26px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED]">
+      <div className="h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED]">
         <div>
           <p className="font-bengali font-medium text-[24px] text-justify">
-            Cualquier acto, conducta o situación cuestionable, inadecuada o aparente de incumplimiento de leyes, 
-            códigos, reglamentos, políticas, procedimientos y demás normas internas y externas, relacionado con 
+            Cualquier acto, conducta o situación cuestionable, inadecuada o aparente de incumplimiento de leyes,
+            códigos, reglamentos, políticas, procedimientos y demás normas internas y externas, relacionado con
             los delitos que establece la ley N° 20.393, de responsabilidad penal de la persona jurídica.
           </p>
         </div>
@@ -57,6 +57,5 @@ const CrimesToReport = () => {
       </div>
     );
   };
-  
+
   export default CrimesToReport;
-  

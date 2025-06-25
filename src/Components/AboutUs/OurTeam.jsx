@@ -18,7 +18,7 @@ const OurTeam = () => {
         Nuestro equipo
       </h2>
       <div className="w-full flex flex-col items-center h-auto">
-        <div className="flex flex-row justify-around h-auto p-[4em_2em] bg-[#EDEDED] shadow-lg rounded-lg w-[90%]">
+        <div className="flex flex-row justify-around h-auto p-[4em_2em] bg-[#EDEDED] rounded-lg w-[90%] border-2 border-[#E2E2E2]">
           <div className="w-[59%] font-bengali font-medium text-[20px] text-justify flex flex-col justify-evenly">
             <p>Fundador de Datum Ingeniería, Ingeniero Geomensor, graduado de la Universidad de Santiago de Chile, con 35 años de experiencia.</p>
             <p>Su dedicación absoluta, combinada con su profundo compromiso con la excelencia, visión estratégica y pasón por la innovación,
@@ -55,13 +55,13 @@ const OurTeam = () => {
             <h2 className="font-[bebas_neue] font-normal text-[64px] text-center content-center">DEPARTAMENTO INGENIERÍA</h2>
           </div>
         </div>
-        <div className="flex flex-row w-[80%] justify-between mt-[8em]">
+        <div className="flex flex-row w-[80%] justify-between mt-[5em]">
           <div className="w-full flex justify-center">
             <h2 className="font-[bebas_neue] font-normal text-[64px] text-center content-center">DEPARTAMENTO TI</h2>
           </div>
           <img src={itDepartment}/>
         </div>
-        <div className="flex flex-row w-[80%] justify-between mt-[8em]">
+        <div className="flex flex-row w-[80%] justify-between mt-[5em]">
           <img src={legalDepartment}/>
           <div className="w-[32%] flex items-center">
             <h2 className="font-[bebas_neue] font-normal text-[64px] text-center content-center">DEPARTAMENTO ADMINISTRACIÓN</h2>

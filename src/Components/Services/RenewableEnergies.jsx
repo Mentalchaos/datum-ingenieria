@@ -14,7 +14,7 @@ const RenewableEnergies = ({ onBack }) => {
 					Prestamos servicios para proyectos de Energías Renovables, aquí se los presentamos
 				</p>
 			</div>
-			<div className="flex w-[90%] my-[5em] justify-between gap-4 flex-wrap">
+			<div className="flex w-[90%] justify-between gap-4 flex-wrap">
 				{[
 					"Diseño accesos viales",
 					"Planos de servidumbre",
@@ -29,7 +29,7 @@ const RenewableEnergies = ({ onBack }) => {
 					</div>
 				))}
 			</div>
-			<div className="flex w-[60%] mx-auto justify-center mt-[2em] my-[4em]">
+			<div className="flex w-[60%] mx-auto justify-center mt-[5em] my-[5em]">
 				<div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
 					<p className="font-bengali font-medium text-[20px] text-center">
 						Proyectos de paralelismo y atraviesos (para bienes nacionales de uso público)
@@ -40,7 +40,7 @@ const RenewableEnergies = ({ onBack }) => {
 					</span>
 				</div>
 			</div>
-			<div className="flex w-[90%] mb-[8em] justify-between gap-4 flex-wrap">
+			<div className="flex w-[90%] mb-[5em] justify-between gap-4 flex-wrap">
 				{[
 					"Proyectos eléctricos de evacuación",
 					"Vialidad interior y obras de saneamiento",
