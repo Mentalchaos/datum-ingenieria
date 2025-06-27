@@ -14,6 +14,9 @@ const Message = ({ message }) => {
         <p className="text-sm text-gray-500">
           <span className="font-bold">Email:</span> {message.email || "N/A"}
         </p>
+        <p className="text-sm text-gray-500">
+          <span className="font-bold">Fecha:</span> {message.created_at || "N/A"}
+        </p>
       </div>
       <div>
         <p className="text-sm text-gray-600 bg-[#F5F5F5] border-gray-500 rounded-md h-full p-4 text-justify">
