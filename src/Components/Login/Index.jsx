@@ -25,8 +25,31 @@ const Login = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleLogin = (e) => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log("login");
 
+    const username = e.target.email.value;
+    const password = e.target.password.value;
+
+    fetch("http://localhost:8000/api/v1/login/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status) {
+          console.log(data);
+          localStorage.setItem("csrf_token", data.csrf_token);
+          window.location.href = "/panel";
+        } else {
+          alert("Credenciales incorrectas");
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -42,9 +65,9 @@ const Login = () => {
               <div className="login-header-subtitle">Ingresa tus credenciales</div>
             </div>
             <div className="login-form-container">
-              <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Correo electrónico" className="login-input" spellCheck="false" />
-                <input type="password" placeholder="Contraseña" className="login-input" spellCheck="false" />
+              <form className="login-form" onSubmit={onSubmit}>
+                <input type="text" placeholder="Correo electrónico" className="login-input" spellCheck="false" name="email" />
+                <input type="password" placeholder="Contraseña" className="login-input" spellCheck="false" name="password" />
                 <button type="submit" className="login-button">Iniciar sesión</button>
                 <a href="#" className="recover-link">¿Has olvidado tu contraseña?</a>
               </form>

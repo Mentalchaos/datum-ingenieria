@@ -46,19 +46,6 @@ const ComplaintsForm = () => {
     });
     const data = await response.json();
 
-  //   curl --request POST \
-  // --url https://7271-201-187-172-65.ngrok-free.app/api/v1/complaints/ \
-  // --header 'Authorization: Basic YWRtaW46MTIz' \
-  // --header 'content-type: multipart/form-data' \
-  // --cookie csrftoken=2UsUu3hmQGGxBl9JXLEMuQetpU3NK7be \
-  // --form 'reported_name=Pedro Astorga' \
-  // --form 'incident_description=Descripcion detallada del incidente ocurrido' \
-  // --form incident_date=2024-06-20 \
-  // --form 'incident_location=Oficina Central, Piso 1' \
-  // --form 'affected_and_witnesses=Las personas afectadas fueron...' \
-  // --form contact_email=pedro.martinez@ejemplo.com \
-  // --form 'contact_phone=+56 9 8763 4322'
-
     console.log(response);
 
     if (response.ok) {

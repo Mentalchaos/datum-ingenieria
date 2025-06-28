@@ -5,7 +5,14 @@ const Reports = () => {
 
   useEffect(() => {
     const fetchReports = async () => {
-      const response = await fetch("http://localhost:8000/api/v1/complaints/");
+      const csrfToken = localStorage.getItem('csrf_token');
+
+      const response = await fetch("http://localhost:8000/api/v1/complaints/", {
+        headers: {
+          "X-CSRFToken": csrfToken,
+        },
+        credentials: 'include'
+      });
       const data = await response.json();
       setReports(data.results);
     };

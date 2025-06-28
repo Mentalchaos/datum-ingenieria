@@ -33,7 +33,15 @@ const Messages = () => {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const response = await fetch("http://localhost:8000/api/v1/contact/messages/");
+      const csrfToken = localStorage.getItem('csrf_token');
+
+
+      const response = await fetch("http://localhost:8000/api/v1/contact/messages/", {
+        headers: {
+          "X-CSRFToken": csrfToken,
+        },
+        credentials: 'include'
+      });
       const data = await response.json();
       setMessages(data.results);
     };
