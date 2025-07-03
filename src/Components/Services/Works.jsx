@@ -5,7 +5,7 @@ const Works = ({ onBack }) => {
 	return (
 		<div className="w-full bg-[#EDEDED] flex items-center flex-col">
 			<Banner image={works} />
-			<div className="flex justify-start items-center w-[100%] mx-auto">
+			<div className="flex justify-start items-center w-[100%] mx-auto pl-2">
 				<div className="font-bengali font-medium text-[1.4em] cursor-pointer" onClick={onBack}>Volver</div>
 			</div>
 			<div className="bg-[#EDEDED] my-[3em]">

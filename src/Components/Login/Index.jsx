@@ -42,7 +42,6 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.status) {
-          console.log(data);
           localStorage.setItem("csrf_token", data.csrf_token);
           window.location.href = "/panel";
         } else {
