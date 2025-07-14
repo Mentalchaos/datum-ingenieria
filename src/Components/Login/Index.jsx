@@ -4,6 +4,7 @@ import background4 from "../../assets/images/lines4.svg";
 import background3 from "../../assets/images/lines3.svg";
 import background2 from "../../assets/images/lines2.svg";
 import background1 from "../../assets/images/lines1.svg";
+import { api } from "../../config/api";
 import { useState, useEffect } from "react";
 
 const backgrounds = [background4, background3, background2, background1];
@@ -32,23 +33,35 @@ const Login = () => {
     const username = e.target.email.value;
     const password = e.target.password.value;
 
-    fetch("http://localhost:8000/api/v1/login/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status) {
-          localStorage.setItem("csrf_token", data.csrf_token);
+    api.post("login/", { username, password })
+      .then((res) => {
+        console.log('Success:', res);
+        if (res.status) {
+          localStorage.setItem("csrf_token", res.csrf_token);
           window.location.href = "/panel";
         } else {
           alert("Credenciales incorrectas");
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log('Error:', err));
+
+    // fetch("http://localhost:8000/api/v1/login/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify({ username, password }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.status) {
+    //       localStorage.setItem("csrf_token", data.csrf_token);
+    //       window.location.href = "/panel";
+    //     } else {
+    //       alert("Credenciales incorrectas");
+    //     }
+    //   })
+    //   .catch((err) => console.log(err));
   };
 
   return (

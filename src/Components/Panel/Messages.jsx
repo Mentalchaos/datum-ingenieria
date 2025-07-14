@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { api } from "../../config/api";
 
 const Message = ({ message }) => {
   return (
@@ -35,15 +36,25 @@ const Messages = () => {
     const fetchMessages = async () => {
       const csrfToken = localStorage.getItem('csrf_token');
 
-
-      const response = await fetch("http://localhost:8000/api/v1/contact/messages/", {
+      api.get("contact/messages/", {
         headers: {
           "X-CSRFToken": csrfToken,
         },
         credentials: 'include'
-      });
-      const data = await response.json();
-      setMessages(data.results);
+      })
+      .then((res) => {
+        setMessages(res.results);
+      })
+      .catch((err) => console.log(err));
+
+      // const response = await fetch("http://localhost:8000/api/v1/contact/messages/", {
+      //   headers: {
+      //     "X-CSRFToken": csrfToken,
+      //   },
+      //   credentials: 'include'
+      // });
+      // const data = await response.json();
+      // setMessages(data.results);
     };
 
     fetchMessages();

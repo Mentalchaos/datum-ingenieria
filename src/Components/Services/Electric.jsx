@@ -1,6 +1,8 @@
 import electric from "../../assets/images/servicesPage/electric.png";
 import logo from "../../assets/images/logo.svg";
 import Banner from "../UI/Banner/index.jsx";
+import ServiceSection from "../UI/ServiceSection/index.jsx";
+
 
 const Item = ({ title, description, image }) => {
   return (
@@ -17,6 +19,42 @@ const Item = ({ title, description, image }) => {
 }
 
 const Electric = ({ onBack }) => {
+  const data = [
+    {
+      blocks: [
+        {
+          title: "Mallas a tierra",
+          description: "Diseñamos e instalamos sistemas de puesta a tierra que garantizan la seguridad de las personas y la protección de los equipos eléctricos frente a descargas o fallos",
+        },
+        {
+          title: "istribución de redes de MT y BT",
+          description: "Proyectamos y supervisamos la instalación de redes eléctricas de media tensión (MT) y baja tensión (BT), asegurando una distribución segura, eficiente y conforme a normativa."
+        },
+        {
+          title: "Proyectos lumínicos",
+          description: "Desarrollamos planes de iluminación para espacios públicos, industriales o privados, optimizando la eficiencia energética y cumpliendo los estándares de seguridad y confort."
+        }
+      ]
+    },
+    {
+      blocks: [
+        {
+          title: "Proyectos de cruces con líneas de AT y MT de terceros",
+          description: "Diseñamos y gestionamos los permisos necesarios para la ejecución de obras que deben cruzar infraestructuras eléctricas de alta (AT) o media tensión (MT) existentes."
+        },
+        {
+          title: "Planos de servidumbre",
+          description: "Elaboramos la documentación técnica que define las franjas de terreno necesarias para la instalación y mantenimiento de redes eléctricas, respetando las normativas legales."
+        },
+        {
+          title: "Planes de instalaciones de terceros",
+          description: "Asesoramos y desarrollamos los estudios y documentación requeridos para que terceros puedan instalar infraestructuras en áreas reguladas o junto a instalaciones eléctricas existentes."
+        }
+      ]
+    }
+  ]
+
+
   const itemDate = [
     {
       title: "Mallas a tierra",
@@ -64,14 +102,12 @@ const Electric = ({ onBack }) => {
       </div>
       <div className="bg-[#EDEDED] my-[5em] flex flex-col">
         <h2 className="font-[bebas_neue] font-normal text-6xl text-center bg-[#EDEDED]">PROYECTOS ELÉCTRICOS</h2>
-        <p className="font-bengali font-light text-[32px] text-justify w-full mt-[3em]">
+        <p className="font-bengali font-light text-[2em] text-justify w-full mt-[3em]">
           Nuestra misión es entregarle los mejores servicios en el área Electrica, por lo que prestamos los siguientes servicios
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-10">
-        {itemRender()}
-      </div>
+      <ServiceSection data={data} />
     </div>
   );
 };

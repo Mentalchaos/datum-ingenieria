@@ -49,6 +49,20 @@ const servicesInfo = [
 const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedService, setSelectedService] = useState(null);
+  const [componentActive, setComponentActive] = useState(null);
+
+  const renderComponent = () => {
+    const CASES = {
+      "topography": <Topography onBack={handlerBack}/>,
+      "inspection": <Works onBack={handlerBack}/>,
+      "road": <Road onBack={handlerBack}/>,
+      "renewable": <RenewableEnergies onBack={handlerBack}/>,
+      "electric": <Electric onBack={handlerBack}/>,
+      "default": null
+    }
+
+    return CASES[selectedService] || null;
+  };
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -56,6 +70,9 @@ const Services = () => {
 
     if (serviceParam) {
       setSelectedService(serviceParam);
+    } else {
+      setSelectedService(null);
+      setComponentActive(renderComponent())
     }
 
     const handlePopState = () => {
@@ -74,20 +91,11 @@ const Services = () => {
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, []);
+  }, [window.location.href]);
 
-
-  const renderComponent = () => {
-    const CASES = {
-      "topography": <Topography onBack={() => setSelectedService(null)}/>,
-      "inspection": <Works onBack={() => setSelectedService(null)}/>,
-      "road": <Road onBack={() => setSelectedService(null)}/>,
-      "renewable": <RenewableEnergies onBack={() => setSelectedService(null)}/>,
-      "electric": <Electric onBack={() => setSelectedService(null)}/>,
-      "default": null
-    }
-
-    return CASES[selectedService] || null;
+  const handlerBack = () => {
+    setSelectedService(null);
+    window.history.back();
   };
 
   const onSelectService = (serviceName) => {

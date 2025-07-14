@@ -12,7 +12,7 @@ const services = [
     width: "w-[47%]",
     height: "h-[451px]",
     listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
+    itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
       "Ferrocarriles",
       "GPS y Geodesia",
@@ -28,7 +28,7 @@ const services = [
     width: "w-[53%]",
     height: "h-[451px]",
     listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
+    itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
       "Mallas a tierra",
       "Proyectos de distribución para redes de MT y BT",
@@ -43,7 +43,7 @@ const services = [
     width: "w-[55%]",
     height: "h-[451px]",
     listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
+    itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
       "Construcción de líneas eléctricas MT y BT",
       "Paralelismo y atraviesos (MOP y EFE)",
@@ -57,7 +57,7 @@ const services = [
     width: "w-[45%]",
     height: "h-[451px]",
     listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    itemClass: "text-[1em] max-w-[300px] mb-[1em]",
+    itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
       "Diseño de planes de señalización",
       "Proyectos de paralelismo y atraviesos (MOP y EFE)",
@@ -70,7 +70,7 @@ const services = [
     width: "w-[85%]",
     height: "h-[451px]",
     listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    itemClass: "text-[1em] w-[400px] mb-[1em]",
+    itemClass: "text-[1em] w-[400px] mb-[.5em]",
     description: [
       "Planos de servidumbre",
       "Cálculo para movimiento de tierra (Cubicación y plataforma)",
@@ -113,7 +113,7 @@ const ServicesBoxes = () => {
                   <div className="w-[50%] flex items-center">
                     {image && <img alt={text} className="w-full h-[100%] p-[2em]" src={image} />}
                   </div>
-                  <div className="w-[250px] flex flex-col justify-around">
+                  <div className="w-[260px] flex flex-col justify-around">
                     {text && <p className="text-[2.1em] font-[bebas_neue] text-[#000000]">{text}</p>}
                     {description && (
                       <ul className={listClass}>

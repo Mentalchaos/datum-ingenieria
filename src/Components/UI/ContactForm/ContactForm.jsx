@@ -3,8 +3,12 @@ import InfoBox from "../InfoBox/InfoBox";
 import Input from "../Input/Input";
 import background from "../../../assets/images/inicio/form-background.png";
 import { useState } from "react";
+import { api } from "../../../config/api";
+import Spinner from "../Spinner/index";
 
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -16,7 +20,7 @@ const ContactForm = () => {
 
   const inputFields = [
     { name: "name", label: "Nombre", placeholder: "Juan González" },
-    { name: "company", label: "Empresa (opcional)", placeholder: "Datum Ingeniería" },
+    { name: "company", label: "Empresa", placeholder: "Datum Ingeniería" },
     { name: "phone", label: "Teléfono", placeholder: "+56 9 1234 5678" },
     { name: "email", label: "Correo electrónico", placeholder: "contacto@datumingenieria.cl" }
   ];
@@ -54,19 +58,16 @@ const ContactForm = () => {
       message: formData.message
     }
 
-    const response = await fetch("http://localhost:8000/api/v1/contact/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
+    setIsLoading(true);
+    api.post("contact/", data)
+    .then((res) => {
       alert("Mensaje enviado correctamente");
-    } else {
-      alert("Error al enviar el mensaje");
-    }
+      setIsLoading(false);
+    })
+    .catch((err) => {
+      setIsLoading(false);
+      console.log(err);
+    });
   };
 
   const handleChange = (e) => {
@@ -75,6 +76,7 @@ const ContactForm = () => {
 
   return (
     <div className="font-roboto">
+      <Spinner fullPage isLoading={isLoading} />
       <div className="w-full h-auto relative">
         <div
           className="border-2 border-[#E2E2E2] rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"

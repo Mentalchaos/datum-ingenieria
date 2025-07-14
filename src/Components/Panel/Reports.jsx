@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { api } from "../../config/api";
 
 const Reports = () => {
   const [reports, setReports] = useState([]);
@@ -7,14 +8,15 @@ const Reports = () => {
     const fetchReports = async () => {
       const csrfToken = localStorage.getItem('csrf_token');
 
-      const response = await fetch("http://localhost:8000/api/v1/complaints/", {
+      api.get("complaints/", {
         headers: {
           "X-CSRFToken": csrfToken,
-        },
-        credentials: 'include'
-      });
-      const data = await response.json();
-      setReports(data.results);
+        }
+      })
+      .then((res) => {
+        setReports(res.results);
+      })
+      .catch((err) => console.log(err));
     };
 
     fetchReports();

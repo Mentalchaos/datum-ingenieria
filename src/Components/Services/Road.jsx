@@ -1,7 +1,44 @@
 import road from "../../assets/images/servicesPage/road.png";
 import Banner from "../UI/Banner/index.jsx";
+import ServiceSection from "../UI/ServiceSection/index.jsx";
+
 
 const Road = ({ onBack }) => {
+  const data = [
+    {
+      blocks: [
+        {
+          title: "Movimiento de tierra",
+          description: "Supervisamos y controlamos las actividades de excavación, relleno y nivelación, garantizando que se cumplan los planos, especificaciones y normativas de seguridad del proyecto.",
+        },
+        {
+          title: "Paralelismos y atraviesas (MOP y EFE)",
+          description: "Gestionamos y verificamos la ejecución segura y correcta de obras que se desarrollan paralelas o cruzan vías ferroviarias o carreteras, cumpliendo estrictamente con las normas del Ministerio de Obras Públicas (MOP) y de la Empresa de Ferrocarriles del Estado (EFE).",
+        },
+      ]
+    },
+    {
+      blocks: [
+        {
+          title: "Planes de señalización",
+          description: "Elaboramos, revisamos e inspeccionamos planes de señalización vial y de obras para garantizar la seguridad y fluidez del tránsito, minimizando riesgos para peatones y conductores.",
+        },
+      ]
+    },
+    {
+      blocks: [
+        {
+          title: "Construcción de líneas eléctricas MT y BT",
+          description: "Realizamos la inspección técnica de la instalación de líneas de media (MT) y baja tensión (BT), asegurando calidad, cumplimiento normativo y prevención de riesgos eléctricos.",
+        },
+        {
+          title: "Proyectos viales",
+          description: "Supervisamos y controlamos la correcta ejecución de proyectos de caminos, carreteras y accesos, asegurando el cumplimiento de los estándares técnicos y de seguridad vial.",
+        },
+      ]
+    }
+  ];
+
 	return (
 		<div className="w-full bg-[#EDEDED] flex items-center flex-col">
 			<Banner image={road} />
@@ -14,6 +51,20 @@ const Road = ({ onBack }) => {
           Nuestra misión es entregarle los mejores servicios en el área Electrica, por lo que prestamos los siguientes servicios.
 				</p>
 			</div>
+
+      <ServiceSection data={data} />
+
+
+
+
+
+
+
+
+
+
+
+{/*
 			<div className="flex w-[60%] mx-auto justify-between mt-[2em] gap-4 flex-wrap">
 				<div className="relative group border-[3px] border-[#EC1B1B] w-[400px] h-[140px] flex items-center justify-center">
 					<p className="font-bengali font-medium text-[20px] text-center">Cálculo para movimiento de tierra</p>
@@ -45,7 +96,10 @@ const Road = ({ onBack }) => {
 						Todos nuestros proyectos son realizados con la última tecnología en Fotogrametría y LiDAR.
 					</span>
 				</div>
-			</div>
+			</div> */}
+
+
+
 		</div>
 	)
 };

@@ -1,22 +1,23 @@
 import { useState, useRef } from "react";
 import lawIcon from "../../assets/images/complaints/law-icon.png";
 import site from "../../assets/images/complaints/site.png";
+import { api } from "../../config/api";
+import Spinner from "../UI/Spinner/index.jsx";
 
 
 const ComplaintsForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:8000/api/v1/complaints/";
 
     const contact_email = e.target.contact_email.value;
     const contact_phone = e.target.contact_phone.value;
     const incident_description = e.target.incident_description.value;
-
-    console.log(contact_email, contact_phone, incident_description);
 
     // Validaciones primero
     if (contact_email === "" || contact_phone === "" || incident_description === "") {
@@ -33,32 +34,33 @@ const ComplaintsForm = () => {
     }
 
     // Crear y enviar FormData
+    setIsLoading(true);
     const formData = new FormData();
     formData.append("contact_email", contact_email);
     formData.append("contact_phone", contact_phone);
     formData.append("incident_description", incident_description);
 
-    const response = await fetch(url, {
-      method: "POST",
-      body: formData,
-      // NO incluir Content-Type header cuando se envía FormData
-      // El navegador lo establece automáticamente con el boundary correcto
+    api.post("complaints/", formData, {}, true)
+    .then((res) => {
+      console.log(res);
+
+      if (res.ticket) {
+        alert("Denuncia enviada correctamente");
+        setIsLoading(false);
+        // window.location.reload();
+      } else {
+        alert("Error al enviar la denuncia");
+        setIsLoading(false);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
     });
-    const data = await response.json();
-
-    console.log(response);
-
-    if (response.ok) {
-      alert("Denuncia enviada correctamente");
-    } else {
-      alert("Error al enviar la denuncia");
-    }
-
-    console.log(data);
   };
 
   return (
     <div className="w-full h-[518px] rounded-[10px] p-10 flex flex-col items-center">
+      <Spinner isLoading={isLoading} fullScreen />
       <form onSubmit={onSubmit} className="flex flex-row items-center">
         <div className="w-[65%]">
           <div className="flex flex-col gap-4 flex-1 w-[90%]">
@@ -73,7 +75,7 @@ const ComplaintsForm = () => {
               />
             </div>
             <div>
-              <label className="block mb-1 font-bengali font-medium text-[20px]" htmlFor="telefono">Teléfono de contacto (No opcional)</label>
+              <label className="block mb-1 font-bengali font-medium text-[20px]" htmlFor="telefono">Teléfono de contacto (No )</label>
               <input
                 name="contact_phone"
                 type="tel"
