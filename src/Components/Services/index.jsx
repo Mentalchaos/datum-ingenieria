@@ -12,6 +12,8 @@ import Road from "./Road";
 import RenewableEnergies from "./RenewableEnergies";
 import Electric from "./Electric";
 import Banner from "../UI/Banner";
+import { isMobile } from "../../utils/viewport";
+
 
 const servicesInfo = [
   {
@@ -109,7 +111,7 @@ const Services = () => {
     return (
       <div
         key={index}
-        className="relative w-1/3 h-[452px] overflow-hidden rounded-[5px] shadow-md cursor-pointer transition-all"
+        className={isMobile ? "w-full h-[452px] overflow-hidden rounded-[5px] shadow-md cursor-pointer transition-all" : "relative w-1/3 h-[452px] overflow-hidden rounded-[5px] shadow-md cursor-pointer transition-all"}
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
         onClick={() => onSelectService(service.serviceName)}
@@ -143,10 +145,10 @@ const Services = () => {
       <div className="flex flex-col items-center text-[#181818] bg-[#E2E2E2] font-[roboto] min-h-svh mb-10">
         {selectedService == null && <div className="flex flex-col items-center">
           <Banner image={services} />
-          <div className="flex justify-center gap-15 px-10 py-10 w-full max-w-[1400px]">
+          <div className={isMobile ? "p-4 w-full" : "flex justify-center gap-15 px-10 py-10 w-full max-w-[1400px]"}>
             {servicesInfo.slice(0, 3).map((service, index) => renderCard(service, index))}
           </div>
-          <div className="flex justify-center gap-15 px-10 pb-20 w-full max-w-[1400px]">
+          <div className={isMobile ? "p-4 w-full" : "flex justify-center gap-15 px-10 pb-20 w-full max-w-[1400px]"}>
             {servicesInfo.slice(3).map((service, index) => renderCard(service, index + 3))}
           </div>
         </div>}

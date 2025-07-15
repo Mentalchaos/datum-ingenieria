@@ -15,11 +15,12 @@ import OurTeam from "./OurTeam";
 import MisionVision from "../Home/MisionVision/misionVision";
 import Timeline from "../Home/TimeLine";
 import Banner from "../UI/Banner";
+import { isMobile } from "../../utils/viewport";
 
 
 const AboutUs = () => {
   return (
-    <div className="text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh">
+    <div className={isMobile ? "text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh overflow-x-hidden" : "text-[#181818] bg-[#EBEBEB] font-[roboto] min-h-svh"}>
       <Banner image={team} />
 
       <div className="flex text-[1.3em] justify-center pb-20 w-full items-center">
@@ -36,7 +37,7 @@ const AboutUs = () => {
       <div className="font-[bebas_neue] font-normal text-[64px] leading-[100%] text-center flex flex-col items-center justify-between h-auto">
         <p>MARCO VALÓRICO</p>
 
-        <div className="grid grid-cols-3 gap-8 mt-[1.5em]">
+        <div className={isMobile ? "grid grid-cols-1 gap-8 mt-[1.5em]" : "grid grid-cols-3 gap-8 mt-[1.5em]"}>
           <div className="flex flex-col items-center text-center m-[0.5em]">
             <img
               src={innovation}

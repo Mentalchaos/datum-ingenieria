@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import logo from "../../../assets/images/logo.svg";
+import { isMobile } from "../../../utils/viewport";
 
 const Item = ({ title, description, image = logo }) => {
   const tooltipClass = classNames({
@@ -13,9 +14,11 @@ const Item = ({ title, description, image = logo }) => {
     "justify-between": true,
     "border-gray-300": true,
     "rounded-lg": true,
-    "w-[450px]": true,
-    "min-w-[450px]": true,
-    "max-w-[450px]": true,
+    "w-[450px]": !isMobile,
+    "min-w-[450px]": !isMobile,
+    "max-w-[450px]": !isMobile,
+    "w-full": isMobile,
+    "mb-4": isMobile
   });
 
   return (

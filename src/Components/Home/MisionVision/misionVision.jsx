@@ -1,5 +1,6 @@
 import mision from "../../../assets/images/inicio/mision.png";
 import vision from "../../../assets/images/inicio/vision.png";
+import { isMobile } from "../../../utils/viewport";
 
 const info = [
   {
@@ -20,9 +21,9 @@ const info = [
 
 const MisionVision = () => {
   return (
-    <div className="flex justify-around px-10 py-20">
+    <div className={isMobile ? "p-4" : "flex justify-around px-10 py-20"}>
       {info.map(({ title, img, description, height }, index) => (
-        <div key={index} className="w-[47%]">
+        <div key={index} className={isMobile ? "w-full" : "w-[47%]"}>
           <p className="font-bebas text-center text-[40px]">{title}</p>
           <div className="group bg-[#EDEDED] p-4 h-[376px] rounded-[10px] flex justify-center items-center relative border-2 border-[#E2E2E2]">
             <img
