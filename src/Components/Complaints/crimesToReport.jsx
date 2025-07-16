@@ -1,6 +1,9 @@
+import { isMobile } from "../../utils/viewport";
+
+
 const CrimesToReport = () => {
     return (
-      <div className="h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED]">
+      <div className={isMobile ? "w-full h-auto rounded-[10px] bg-[#EDEDED] text-[1.6em] font-bengali text-justify" : "h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED] text-[1.6em] font-bengali"}>
         <div>
           <p className="font-bengali font-medium text-[24px] text-justify">
             Cualquier acto, conducta o situación cuestionable, inadecuada o aparente de incumplimiento de leyes,
@@ -9,50 +12,63 @@ const CrimesToReport = () => {
           </p>
         </div>
         <div>
-          <h2 className="font-[bebas_neue] font-normal text-[40px] text-center my-[1em]">
+          <h2 className={isMobile ? "font-[bebas_neue] font-normal text-[1.5em] text-center my-[1em]" : "font-[bebas_neue] font-normal text-[40px] text-center my-[1em]"}>
             Delitos que contempla la Ley Nº 20.393
           </h2>
-          <ul className="font-bengali font-semibold text-[24px] list-none pl-0 w-full flex flex-col">
-            <li className="mb-2 flex justify-between">
-              Cohecho <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Lavado de Activos <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Receptación <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Apropiación Indebida <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Soborno entre Particulares <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Administración Desleal <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Negociación Incompatible <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Trata de Personas <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Contaminación de Cuerpos de Agua <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Acceso Ilícito <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Interceptación Ilícita <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Abuso de los Dispositivos <span className="text-[28px]">+</span>
-            </li>
-            <li className="mb-2 flex justify-between">
-              Otros Delitos Asociados a la Ley 20.393 <span className="text-[28px]">+</span>
-            </li>
-          </ul>
+          <div className={isMobile ? "font-bengali font-semibold text-[.8em] list-none w-full flex flex-col" : "font-bengali font-semibold text-[24px] list-none pl-0 w-full flex flex-col"}>
+            <div className="mb-[1em] flex justify-between">
+              <div>Cohecho</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Lavado de Activos</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Receptación</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Apropiación Indebida</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Soborno entre Particulares</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Administración Desleal</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Negociación Incompatible</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Trata de Personas</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Contaminación de Cuerpos de Agua</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Acceso Ilícito</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Interceptación Ilícita</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Abuso de los Dispositivos</div>
+              <div>+</div>
+            </div>
+            <div className="mb-[1em] flex justify-between">
+              <div>Otros Delitos Asociados a la Ley 20.393</div>
+              <div>+</div>
+            </div>
+          </div>
         </div>
       </div>
     );

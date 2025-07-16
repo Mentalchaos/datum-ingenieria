@@ -7,7 +7,6 @@ const Item = ({ title, description, image = logo }) => {
     "tooltip": true,
     "expand": true,
     "border-[3px]": true,
-    "w-full": true,
     "h-[140px]": true,
     "flex": true,
     "items-center": true,

@@ -2,6 +2,7 @@ import electric from "../../assets/images/servicesPage/electric.png";
 import logo from "../../assets/images/logo.svg";
 import Banner from "../UI/Banner/index.jsx";
 import ServiceSection from "../UI/ServiceSection/index.jsx";
+import { isMobile } from "../../utils/viewport";
 
 
 const Item = ({ title, description, image }) => {
@@ -102,7 +103,7 @@ const Electric = ({ onBack }) => {
       </div>
       <div className="bg-[#EDEDED] my-[5em] flex flex-col">
         <h2 className="font-[bebas_neue] font-normal text-6xl text-center bg-[#EDEDED]">PROYECTOS ELÉCTRICOS</h2>
-        <p className="font-bengali font-light text-[2em] text-justify w-full mt-[3em]">
+        <p className={isMobile ? "font-bengali font-light text-[1.5em] text-justify w-full mt-[3em]" : "font-bengali font-light text-[2em] text-center w-full mt-[3em] max-w-[1000px] mx-auto"}>
           Nuestra misión es entregarle los mejores servicios en el área Electrica, por lo que prestamos los siguientes servicios
         </p>
       </div>
