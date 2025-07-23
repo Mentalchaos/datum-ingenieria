@@ -80,10 +80,10 @@ const ContactForm = () => {
       <Spinner fullPage isLoading={isLoading} />
       <div className="w-full h-auto relative">
         <div
-          className={isMobile ? "border-2 border-[#E2E2E2] rounded-lg w-full h-full bg-[#EDEDED] bg-cover bg-center" : "border-2 border-[#E2E2E2] rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"}
+          className={isMobile() ? "border-2 border-[#E2E2E2] rounded-lg w-full h-full bg-[#EDEDED] bg-cover bg-center" : "border-2 border-[#E2E2E2] rounded-lg p-12 w-full h-full bg-[#EDEDED] bg-cover bg-center"}
         >
-          <div className={isMobile ? "flex flex-col h-full pt-10" : "flex h-full pt-10"}>
-            <div className={isMobile ? "flex flex-col justify-between w-full h-3/4 px-5" : "flex flex-col justify-between w-1/2 h-3/4 px-5"}>
+          <div className={isMobile() ? "flex flex-col h-full pt-10" : "flex h-full pt-10"}>
+            <div className={isMobile() ? "flex flex-col justify-between w-full h-3/4 px-5" : "flex flex-col justify-between w-1/2 h-3/4 px-5"}>
               {inputFields.map(({ name, label, placeholder }, index) => (
                 <div key={label} className={`w-full ${index !== inputFields.length - 1 ? "mb-10" : ""}`}>
                   <label className="block font-bengali font-medium text-[20px] text-[#181818] mb-2">
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 </div>
               ))}
             </div>
-            <div className={isMobile ? "flex flex-col w-full px-5 h-3/4" : "flex flex-col w-1/2 px-5 h-3/4"}>
+            <div className={isMobile() ? "flex flex-col w-full px-5 h-3/4" : "flex flex-col w-1/2 px-5 h-3/4"}>
               <div className="w-full mb-10">
                 <label className="block font-bengali font-medium text-[20px] text-[#181818] mb-2">
                   Asunto
@@ -122,7 +122,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="flex justify-center bottom-15 w-full pt-[3em]" onClick={onSendMessage}>
+          <div className={isMobile() ? "flex justify-center bottom-15 w-full pt-[3em] mb-[2em]" : "flex justify-center bottom-15 w-full pt-[3em]"} onClick={onSendMessage}>
             <Button label="Enviar" variant="danger" className="p-[50px] shadow-[0px_0px_18.6px_6px_#00000021]"/>
           </div>
         </div>

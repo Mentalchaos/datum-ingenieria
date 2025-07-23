@@ -12,8 +12,8 @@ const services = [
     image: topo,
     width: "w-[47%]",
     height: "h-[451px]",
-    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    mobileListClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    listClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
+    mobileListClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
     itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     itemClassMobile: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
@@ -30,8 +30,8 @@ const services = [
     image: electric,
     width: "w-[53%]",
     height: "h-[451px]",
-    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    mobileListClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    listClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
+    mobileListClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
     itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     itemClassMobile: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
@@ -47,8 +47,8 @@ const services = [
     image: inspection,
     width: "w-[55%]",
     height: "h-[451px]",
-    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    mobileListClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    listClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
+    mobileListClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
     itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     itemClassMobile: "text-[1em] max-w-[300px] mb-[.5em]",
     description: [
@@ -63,8 +63,8 @@ const services = [
     image: road,
     width: "w-[45%]",
     height: "h-[451px]",
-    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
-    mobileListClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    listClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
+    mobileListClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
     itemClass: "text-[1em] max-w-[300px] mb-[.5em]",
     itemClassMobile: "text-[1em] w-full mb-[.5em]",
     description: [
@@ -78,7 +78,7 @@ const services = [
     image: renewable,
     width: "w-[85%]",
     height: "h-[451px]",
-    listClass: "text-sm text-gray-700 list-disc pl-10 font-inter flex flex-col justify-around",
+    listClass: "text-sm text-gray-700 list-disc pl-2 font-inter flex flex-col justify-around",
     mobileListClass: "text-sm text-gray-700 list-disc font-inter flex flex-col justify-around",
     itemClass: "text-[1em] w-[400px] mb-[.5em]",
     itemClassMobile: "text-[1em] w-full mb-[.5em]",
@@ -103,16 +103,16 @@ const ServicesBoxes = () => {
         const isReversed = text === "Proyectos Eléctricos" || text === "Inspección técnica de obras";
 
         return (
-          <InfoBox key={index} width={isMobile ? "w-full" : width} height={isMobile ? "h-full" : height}>
+          <InfoBox key={index} width={isMobile() ? "w-full" : width} height={isMobile() ? "h-full" : height}>
             <div className="gap-4 flex-col md:flex md:flex-row h-full">
               {isReversed ? (
                 <>
                   <div className="w-full md:w-[70%] flex flex-col justify-around">
-                    {text && <p className="text-[2.1em] font-[bebas_neue] text-[#000000]">{text}</p>}
+                    {text && <p className={isMobile() ? "text-[1.5em] font-[bebas_neue] text-[#000000] text-center mb-5" : "text-[2.1em] font-[bebas_neue] text-[#000000]"}>{text}</p>}
                     {description && (
-                      <ul className={isMobile ? mobileListClass : listClass}>
+                      <ul className={isMobile() ? mobileListClass : listClass}>
                         {description.map((item, i) => (
-                          <li key={i} className={isMobile ? itemClassMobile : itemClass}>{item}</li>
+                          <li key={i} className={isMobile() ? itemClassMobile : itemClass}>{item}</li>
                         ))}
                       </ul>
                     )}
@@ -127,11 +127,11 @@ const ServicesBoxes = () => {
                     {image && <img alt={text} className="w-full h-[100%] p-[2em]" src={image} />}
                   </div>
                   <div className="w-full md:w-[260px] flex flex-col justify-around">
-                    {text && <p className="text-[2.1em] font-[bebas_neue] text-[#000000]">{text}</p>}
+                    {text && <p className={isMobile() ? "text-[1.5em] font-[bebas_neue] text-[#000000] text-center mb-5" : "text-[2.1em] font-[bebas_neue] text-[#000000]"}>{text}</p>}
                     {description && (
-                      <ul className={isMobile ? mobileListClass : listClass}>
+                      <ul className={isMobile() ? mobileListClass : listClass}>
                         {description.map((item, i) => (
-                          <li key={i} className={isMobile ? itemClassMobile : itemClass}>{item}</li>
+                          <li key={i} className={isMobile() ? itemClassMobile : itemClass}>{item}</li>
                         ))}
                       </ul>
                     )}

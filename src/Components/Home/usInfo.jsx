@@ -22,13 +22,14 @@ const UsInfoBox = () => {
     <Box key={index} title={title} image={image} description={description} />
   ));
 
-  const contentClass = isMobile ? "w-[90%] mx-auto relative" : "top-0 left-0 w-[90%] mx-auto relative h-[300px]";
-  const containerClass = isMobile ? "w-[90%] mx-auto relative" : "absolute -top-20 left-0 w-full h-full";
+  const contentClass = isMobile() ? "w-[90%] mx-auto relative" : "top-0 left-0 w-[90%] mx-auto relative h-[300px]";
+  const containerClass = isMobile() ? "w-[90%] mx-auto relative" : "absolute -top-20 left-0 w-full h-full";
+  const boxesContainerClass = isMobile() ? "bg-[#EDEDED] border-2 border-[#E2E2E2] rounded-lg grid grid-cols-1 sm:grid-cols-3 mt-[2em]" : "bg-[#EDEDED] border-2 border-[#E2E2E2] rounded-lg grid grid-cols-1 sm:grid-cols-3";
 
   return (
     <div className={contentClass}>
       <div className={containerClass}>
-        <div className="bg-[#EDEDED] border-2 border-[#E2E2E2] rounded-lg grid grid-cols-1 sm:grid-cols-3">
+        <div className={boxesContainerClass}>
           {boxes}
         </div>
       </div>

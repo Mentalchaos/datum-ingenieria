@@ -5,6 +5,7 @@ import HomeContact from "./HomeContact/index.jsx";
 import LogosSlider from "../UI/LogosSlider/LogosSlider.jsx";
 import UsInfoBox from "./usInfo.jsx";
 import Banner from "../UI/Banner/index.jsx";
+import { isMobile } from "../../utils/viewport.js";
 
 const Home = () => {
   return (

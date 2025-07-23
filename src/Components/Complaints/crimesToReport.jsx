@@ -3,7 +3,7 @@ import { isMobile } from "../../utils/viewport";
 
 const CrimesToReport = () => {
     return (
-      <div className={isMobile ? "w-full h-auto rounded-[10px] bg-[#EDEDED] text-[1.6em] font-bengali text-justify" : "h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED] text-[1.6em] font-bengali"}>
+      <div className={isMobile() ? "w-full h-auto rounded-[10px] bg-[#EDEDED] text-[1.6em] font-bengali text-justify" : "h-auto rounded-[10px] pr-[200px] pb-[26px] pl-[200px] bg-[#EDEDED] text-[1.6em] font-bengali"}>
         <div>
           <p className="font-bengali font-medium text-[24px] text-justify">
             Cualquier acto, conducta o situación cuestionable, inadecuada o aparente de incumplimiento de leyes,
@@ -12,10 +12,10 @@ const CrimesToReport = () => {
           </p>
         </div>
         <div>
-          <h2 className={isMobile ? "font-[bebas_neue] font-normal text-[1.5em] text-center my-[1em]" : "font-[bebas_neue] font-normal text-[40px] text-center my-[1em]"}>
+          <h2 className={isMobile() ? "font-[bebas_neue] font-normal text-[1.5em] text-center my-[1em]" : "font-[bebas_neue] font-normal text-[40px] text-center my-[1em]"}>
             Delitos que contempla la Ley Nº 20.393
           </h2>
-          <div className={isMobile ? "font-bengali font-semibold text-[.8em] list-none w-full flex flex-col" : "font-bengali font-semibold text-[24px] list-none pl-0 w-full flex flex-col"}>
+          <div className={isMobile() ? "font-bengali font-semibold text-[.8em] list-none w-full flex flex-col" : "font-bengali font-semibold text-[24px] list-none pl-0 w-full flex flex-col"}>
             <div className="mb-[1em] flex justify-between">
               <div>Cohecho</div>
               <div>+</div>

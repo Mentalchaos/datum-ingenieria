@@ -30,15 +30,15 @@ const Timeline = () => {
   ];
 
   return (
-    <div className={isMobile ? "flex flex-col items-center p-4 justify-between pb-[5em]" : "flex flex-col items-center p-8 h-[380px] justify-between pb-[5em]"}>
+    <div className={isMobile() ? "flex flex-col items-center p-4 justify-between pb-[5em]" : "flex flex-col items-center p-8 h-[380px] justify-between pb-[5em]"}>
       <h2 className="text-[64px] font-[bebas_neue] text-[#000000] mb-6">HISTORIA</h2>
-      <p className={isMobile ? "text-[2em] font-[bebas_neue] text-[#000000] mb-[2em] text-center" : "text-[3em] font-[bebas_neue] text-[#000000] mb-[2em]"}>
+      <p className={isMobile() ? "text-[2em] font-[bebas_neue] text-[#000000] mb-[2em] text-center" : "text-[3em] font-[bebas_neue] text-[#000000] mb-[2em]"}>
         UN LARGO CAMINO DE DESAFÍOS Y EXPERIENCIAS ADQUIRIDAS
       </p>
 
       <div
         className={
-          isMobile
+          isMobile()
             ? "relative flex flex-col items-center justify-center w-full max-w-4xl"
             : "relative flex items-center justify-center w-full max-w-4xl"
         }
@@ -47,14 +47,14 @@ const Timeline = () => {
           <div
             key={index}
             className={
-              isMobile
+              isMobile()
                 ? "flex flex-col items-center relative"
                 : "flex items-center relative"
             }
           >
             <div
               className={
-                isMobile
+                isMobile()
                   ? "flex items-center justify-center w-18 h-18 border-2 border-red-500 rounded-full font-bengali text-[20px] text-black relative group mb-2"
                   : "flex items-center justify-center w-18 h-18 border-2 border-red-500 rounded-full font-bengali text-[20px] text-black relative group"
               }
@@ -63,7 +63,7 @@ const Timeline = () => {
               {event.tooltip && (
                 <span
                   className={
-                    isMobile
+                    isMobile()
                       ? "absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-[#D9D9D9] text-black font-bengali font-medium text-[18px] text-justify rounded opacity-0 group-hover:opacity-100 transition-opacity w-[260px] p-4 shadow-lg pointer-events-none z-20"
                       : "absolute top-full mt-2 bg-[#D9D9D9] text-black font-bengali font-medium text-[20px] text-justify rounded opacity-0 group-hover:opacity-100 transition-opacity w-[510px] p-8 shadow-lg pointer-events-none"
                   }
@@ -73,7 +73,7 @@ const Timeline = () => {
               )}
             </div>
             {index < events.length - 1 &&
-              (isMobile ? (
+              (isMobile() ? (
                 <div className="w-1 h-16 bg-red-500 mx-auto"></div>
               ) : (
                 <div className="w-35 h-1 bg-red-500"></div>

@@ -21,10 +21,10 @@ const info = [
 
 const MisionVision = () => {
   return (
-    <div className={isMobile ? "p-4" : "flex justify-around px-10 py-20"}>
+    <div className={isMobile() ? "p-4" : "flex justify-around px-10 py-20"}>
       {info.map(({ title, img, description, height }, index) => (
-        <div key={index} className={isMobile ? "w-full" : "w-[47%]"}>
-          <p className="font-bebas text-center text-[40px]">{title}</p>
+        <div key={index} className={isMobile() ? "w-full" : "w-[47%]"}>
+          <p className={isMobile() ? "font-bebas text-center text-[2.5em] mb-5 mt-5" : "font-bebas text-center text-[3em]"}>{title}</p>
           <div className="group bg-[#EDEDED] p-4 h-[376px] rounded-[10px] flex justify-center items-center relative border-2 border-[#E2E2E2]">
             <img
               src={img}

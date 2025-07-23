@@ -60,13 +60,13 @@ const ComplaintsForm = () => {
   };
 
   return (
-    <div className={isMobile ? "w-full rounded-[10px] p-10 flex flex-col items-center" : "w-full h-[518px] rounded-[10px] p-10 flex flex-col items-center"}>
+    <div className={isMobile() ? "w-full rounded-[10px] p-5 flex flex-col items-center" : "w-full h-[518px] rounded-[10px] p-10 flex flex-col items-center"}>
       <Spinner isLoading={isLoading} fullScreen />
-      <form onSubmit={onSubmit} className={isMobile ? "flex flex-col items-center" : "flex flex-row items-center"}>
-        <div className={isMobile ? "w-full" : "w-[65%]"}>
-          <div className={isMobile ? "flex flex-col gap-4 flex-1 w-full" : "flex flex-col gap-4 flex-1 w-[90%]"}>
+      <form onSubmit={onSubmit} className={isMobile() ? "flex flex-col items-center" : "flex flex-row items-center"}>
+        <div className={isMobile() ? "w-full" : "w-[65%]"}>
+          <div className={isMobile() ? "flex flex-col gap-4 flex-1 w-full" : "flex flex-col gap-4 flex-1 w-[90%]"}>
             <div>
-              <label className={isMobile ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="email">Correo electrónico (No opcional)</label>
+              <label className={isMobile() ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="email">Correo electrónico (No opcional)</label>
               <input
                 name="contact_email"
                 type="email"
@@ -76,7 +76,7 @@ const ComplaintsForm = () => {
               />
             </div>
             <div>
-              <label className={isMobile ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="telefono">Teléfono de contacto (No )</label>
+              <label className={isMobile() ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="telefono">Teléfono de contacto (No )</label>
               <input
                 name="contact_phone"
                 type="tel"
@@ -86,7 +86,7 @@ const ComplaintsForm = () => {
               />
             </div>
             <div className="flex-1">
-              <label className={isMobile ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="descripcion">Descripción del caso</label>
+              <label className={isMobile() ? "block mb-1 font-bengali font-medium text-[1.2em] " : "block mb-1 font-bengali font-medium text-[1.3em] "} htmlFor="descripcion">Descripción del caso</label>
               <textarea
                 name="incident_description"
                 id="incident_description"
@@ -97,22 +97,22 @@ const ComplaintsForm = () => {
             </div>
           </div>
         </div>
-        <div className={isMobile ? "w-full shadow-[0px_0px_3px_0px_#0000003B] rounded-[10px] py-[20px] px-[10px]" : "w-[45%] shadow-[0px_0px_3px_0px_#0000003B] rounded-[10px] py-[20px] px-[10px]"}>
+        <div className={isMobile() ? "w-full shadow-[0px_0px_3px_0px_#0000003B] rounded-[10px] py-[20px] px-[10px]" : "w-[45%] shadow-[0px_0px_3px_0px_#0000003B] rounded-[10px] py-[20px] px-[10px]"}>
           <div className="flex items-center justify-around">
             <input
               type="checkbox"
               className="w-[19px] h-[19px] rounded-[2px] border border-gray-400 bg-[#EDEDED]"
             />
-            <p className={isMobile ? "font-medium text-[1.2em] font-bengali w-full" : "font-medium text-[20px] font-bengali w-[76%]"}>Debe adjuntar medios probatorios que acrediten su denuncia (Imágenes, documentos, correos electrónicos, etc.)
+            <p className={isMobile() ? "font-medium text-[1.2em] font-bengali w-full ml-2" : "font-medium text-[20px] font-bengali w-[76%]"}>Debe adjuntar medios probatorios que acrediten su denuncia (Imágenes, documentos, correos electrónicos, etc.)
             [Límite de carga 15 archivos, hasta 24 MB]</p>
           </div>
-          <div className="flex justify-around items-center my-[1em]">
+          <div className={isMobile() ? "grid gap-5 justify-center my-[1em]" : "flex justify-around items-center my-[1em]"}>
             <button type="submit" className="w-[145px] h-[29px] rounded-[10px] border-[0.5px] border-[#494949] bg-[#E5E5E5]">Adjuntar archivos</button>
             <button type="submit" className="w-[141px] h-[39px] rounded-[10px] bg-[#E50000] text-[#EDEDED] text-[14px] font-bengali">Enviar denuncia</button>
           </div>
         </div>
       </form>
-      <div className={isMobile ? "grid grid-cols-1 gap-4 mt-[2em]" : "grid grid-cols-3 gap-4 mt-[2em]"}>
+      <div className={isMobile() ? "grid grid-cols-1 gap-4 mt-[2em]" : "grid grid-cols-3 gap-4 mt-[2em]"}>
         <div className="flex items-center border-[1px] border-[#FF0500] rounded-[10px] py-[5px] px-[10px]">
           <img className="mr-2" src={lawIcon} />
           <p className="font-medium text-[20px] font-bengali">Ley Karin</p>
