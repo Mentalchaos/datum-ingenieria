@@ -1,0 +1,74 @@
+{
+  "pages": {
+    "/": [
+      "static/chunks/f9a7ba59d673a94a.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/turbopack-86a3cd3989c2e7c1.js"
+    ],
+    "/_app": [
+      "static/chunks/c4ddfbe6fd24eff6.js",
+      "static/chunks/bc7421d54b698516.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/7fd85a8c6294ca6f.css",
+      "static/chunks/turbopack-702363f1e91a1092.js"
+    ],
+    "/_error": [
+      "static/chunks/977a1f11e77a7185.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/turbopack-55cad274533fdd1f.js"
+    ],
+    "/contacto": [
+      "static/chunks/6554824b439993cb.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/turbopack-7c39053c84fd0755.js"
+    ],
+    "/energia": [
+      "static/chunks/cd991a85b632e5d5.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/turbopack-3c5ce1f7d13b1d4c.js"
+    ],
+    "/historia": [
+      "static/chunks/387f2b2815aab232.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/turbopack-98979033cb1abaf0.js"
+    ],
+    "/lidar": [
+      "static/chunks/43c0d30d49c9ba50.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/turbopack-3d6e350ec20f0e7e.js"
+    ],
+    "/reporte": [
+      "static/chunks/86a893c11d931a60.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/turbopack-d78f3fe86fb3c9fb.js"
+    ],
+    "/topografia": [
+      "static/chunks/aaa52b56ebbea978.js",
+      "static/chunks/d20f08ad8ae06367.js",
+      "static/chunks/3254ba53c4695283.js",
+      "static/chunks/6d2398a612724f11.js",
+      "static/chunks/turbopack-1912f708b4932533.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/e3Zvc0RsSVGzcYSfHnUHB/_ssgManifest.js",
+    "static/e3Zvc0RsSVGzcYSfHnUHB/_buildManifest.js"
+  ],
+  "rootMainFiles": []
+}
