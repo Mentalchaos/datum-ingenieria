@@ -1,9 +1,8 @@
-// next.config.ts
 import path from "path";
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repo = "datum-ingenieria"; // <-- nombre exacto del repo
+const repo = "datum-ingenieria";
 
 const nextConfig: NextConfig = {
   output: "export",

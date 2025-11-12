@@ -5,12 +5,12 @@
   "homepage": "https://mentalchaos.github.io/datum-ingenieria",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "build": "next build",
+    "postbuild": "touch out/.nojekyll",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -b gh-pages",
-    "postbuild": "touch out/.nojekyll"
+    "deploy": "gh-pages -d out -b gh-pages"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.2",

@@ -1,7 +1,0 @@
-__turbopack_load_page_chunks__("/lidar", [
-  "static/chunks/43c0d30d49c9ba50.js",
-  "static/chunks/d20f08ad8ae06367.js",
-  "static/chunks/37a3e5e526238abf.js",
-  "static/chunks/1d63de0ca611aeef.js",
-  "static/chunks/turbopack-46c2f7ed606f6c06.js"
-])
