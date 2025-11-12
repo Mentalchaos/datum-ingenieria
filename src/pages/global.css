@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('/fonts/HelveticaNeue-Light.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-dm-serif-display {
+  font-family: 'DM Serif Display', serif;
+}
+
+.font-helvetica-neue-light {
+  font-family: 'Helvetica Neue Light';
+}
+
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.feature-section {
+  view-timeline-name: --feature;
+  view-timeline-axis: block;
+
+  animation-timeline: --feature;
+  animation-name: show;
+  animation-range: entry 5% cover 50%;
+  animation-range-end: exit 5% cover 50%;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
