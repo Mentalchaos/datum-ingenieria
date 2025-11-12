@@ -1,27 +1,27 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/27583c371af9a497.js"
+    "static/chunks/4084d2e293cdf03b.js"
   ],
   "/_error": [
     "static/chunks/5d4b782aacc2e7a6.js"
   ],
   "/contacto": [
-    "static/chunks/92cde259b183f03f.js"
+    "static/chunks/ba35447e398bd3d0.js"
   ],
   "/energia": [
-    "static/chunks/ddb7b0b2f4682797.js"
+    "static/chunks/e2eddd480441266f.js"
   ],
   "/historia": [
-    "static/chunks/1d8b411f6c743653.js"
+    "static/chunks/59bedd3d816c2af6.js"
   ],
   "/lidar": [
-    "static/chunks/23f6262cb8b1702e.js"
+    "static/chunks/15d5ec9f026d83ca.js"
   ],
   "/reporte": [
-    "static/chunks/e813ef059aa3aa2d.js"
+    "static/chunks/41dad9a1256ba789.js"
   ],
   "/topografia": [
-    "static/chunks/4cbac56f98db7dac.js"
+    "static/chunks/4647bc6c836ac634.js"
   ],
   "__rewrites": {
     "afterFiles": [],
