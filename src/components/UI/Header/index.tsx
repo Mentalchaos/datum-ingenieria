@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 
 interface HeaderItemProps {
@@ -120,7 +121,7 @@ const Header = () => {
     <header className="bg-[#2D2E33] text-white sticky top-0 z-50">
       <div className="grid grid-cols-2 max-w-[1200px] mx-auto h-[80px]">
         <div className="flex items-center w-[200px]">
-          <img src="/images/logo.png" alt="Logo" className="object-fit" />
+          <Image src="/images/logo.png" alt="Logo" className="object-fit" />
         </div>
         <div className="flex items-center justify-end relative">
           <div className="hidden lg:flex items-center gap-10">

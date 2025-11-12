@@ -1,5 +1,7 @@
 import { FeatureSectionProps } from "./interface";
 
+import Image from "next/image";
+
 export function FeatureSection({
   title,
   description,
@@ -10,7 +12,7 @@ export function FeatureSection({
 }: FeatureSectionProps) {
   const element = video
     ? <video src={imageUrl} autoPlay muted loop className="absolute top-0 left-0 w-full h-full object-cover" />
-    : <img src={imageUrl} alt={title} className="absolute top-0 left-0 w-full h-full object-cover" />
+    : <Image src={imageUrl} alt={title} className="absolute top-0 left-0 w-full h-full object-cover" />
 
   const borderClass = border
     ? "border-t-10 border-r-10 border-l-10 border-white"

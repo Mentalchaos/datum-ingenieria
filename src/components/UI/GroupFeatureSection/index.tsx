@@ -5,7 +5,7 @@ const Item = ({ title, description, imageUrl }: { title: string, description: st
   return (
     <div className="group-feature-section relative w-full rounded-lg overflow-hidden group cursor-pointer">
       <div className="absolute inset-0">
-        <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+        <={imageUrl} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 h-full min-h-[475px] flex flex-col justify-end p-6 lg:p-8 text-right">
