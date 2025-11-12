@@ -1,0 +1,7 @@
+__turbopack_load_page_chunks__("/historia", [
+  "static/chunks/387f2b2815aab232.js",
+  "static/chunks/d20f08ad8ae06367.js",
+  "static/chunks/1d63de0ca611aeef.js",
+  "static/chunks/37a3e5e526238abf.js",
+  "static/chunks/turbopack-7560a5eb4a920e6a.js"
+])
