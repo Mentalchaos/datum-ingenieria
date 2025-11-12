@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { withBase } from "@/lib/asset";
 
 const Footer = () => {
   return (
     <footer className="min-h-[560px] lg:min-h-[640px] bg-[#2D2E33] pt-16 pb-12 px-6 lg:px-12">
       <div className="flex items-center justify-center max-w-[200px] mx-auto mb-12">
-        <Image src="/images/logo.png" alt="Footer" className="w-full h-full object-cover" />
+        <Image src={withBase("/images/logo.png")} alt="Footer" fill className="w-full h-full object-cover" />
       </div>
 
       <div className="text-white text-center text-[1em] lg:text-[1.2em] flex flex-col items-center justify-center mx-auto">

@@ -12,8 +12,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 
   env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repo}` : "",
-  },
+  NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === "production" ? "/datum-ingenieria" : "",
+},
+
 
   turbopack: {
     resolveAlias: {
