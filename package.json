@@ -10,7 +10,7 @@
     "build": "next build",
     "postbuild": "touch out/.nojekyll",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "deploy": "gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.2",
