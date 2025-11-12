@@ -1,11 +1,11 @@
 import { GroupsFeaturesSectionProps } from "@/components/UI/FeatureSection/interface";
-
+import Image from "next/image";
 
 const Item = ({ title, description, imageUrl }: { title: string, description: string, imageUrl: string }) => {
   return (
     <div className="group-feature-section relative w-full rounded-lg overflow-hidden group cursor-pointer">
       <div className="absolute inset-0">
-        <={imageUrl} alt={title} className="w-full h-full object-cover" />
+        <Image src={imageUrl} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 h-full min-h-[475px] flex flex-col justify-end p-6 lg:p-8 text-right">
